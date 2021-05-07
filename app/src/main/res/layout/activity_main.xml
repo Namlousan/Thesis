@@ -17,22 +17,26 @@
         android:layout_marginTop="200dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
+
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:hint="Username"
-            app:hintTextColor="@color/black">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:hintTextColor="@color/black"
+            app:startIconDrawable="@drawable/person">
+
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textVisiblePassword|textNoSuggestions"
-                android:maxLength="12"
-                android:id="@+id/Username"/>
+                android:maxLength="12" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +44,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Password"
             app:passwordToggleEnabled="true"
-            app:hintTextColor="@color/black">
+            app:hintTextColor="@color/black"
+            app:startIconDrawable="@drawable/lock">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,7 +62,7 @@
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:text="Forgot Password?"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:textSize="12sp"/>
@@ -75,7 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Log in"
-            android:background="#32CD32"
+            android:background="#87CEFA"
             android:textColor="@color/black"/>
 
         <Button
@@ -85,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:text="Cancel"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:background="#00000000"/>
 
     </LinearLayout>

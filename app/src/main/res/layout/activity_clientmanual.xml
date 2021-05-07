@@ -62,6 +62,7 @@
         android:fillViewport="true">
 
         <TextView
+            android:scrollbars="vertical"
             android:textColor="@color/black"
             android:id="@+id/how_to_do"
             android:layout_width="fill_parent"
@@ -79,13 +80,14 @@
         android:padding="20dp">
 
         <Button
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:text="null"/>
 
         <Button
+            android:layout_gravity="right"
             android:id="@+id/back2"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="back"/>

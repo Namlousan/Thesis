@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="Choose Client"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:padding="20dp"
             android:layout_marginTop="15dp" />
     </com.google.android.material.textfield.TextInputLayout>

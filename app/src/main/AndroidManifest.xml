@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ADMIN">
-        <activity android:name=".Manuals"></activity>
+        <activity android:name=".U_client_Info"></activity>
+        <activity android:name=".Update_client_info" />
+        <activity android:name=".Manuals" />
         <activity android:name=".Logs" />
         <activity android:name=".Clientmanual" />
         <activity android:name=".New_admin" />

@@ -9,6 +9,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +30,20 @@ class MainActivity : AppCompatActivity() {
 
         val button2 =findViewById<Button>(R.id.cancel_mainscreen)
         button2.setOnClickListener {
-            finish()
+            val alertdialog: AlertDialog =AlertDialog.Builder(this).create()
+            alertdialog.setTitle("Exit")
+            alertdialog.setMessage("Are you sure you want to exit?")
+            alertdialog.setButton(AlertDialog.BUTTON_POSITIVE,"yes"){
+                dialog, which -> finish()
+                dialog.dismiss()
+            }
+            alertdialog.setButton(AlertDialog.BUTTON_NEGATIVE,"No"){
+                dialog, which ->
+                dialog.dismiss()
+            }
+            alertdialog.show()
         }
+
 
 
 }}

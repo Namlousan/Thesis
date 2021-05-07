@@ -1,6 +1,7 @@
 package com.thesis.admin
 
 import android.annotation.TargetApi
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.cardview.widget.CardView
 
 class Home_menu : AppCompatActivity() {
@@ -33,6 +35,22 @@ class Home_menu : AppCompatActivity() {
                 startActivity(intent)
             }
 
+        val cardViewlogout=findViewById<CardView>(R.id.logout)
+        cardViewlogout.setOnClickListener {
+            val alertdialog: AlertDialog = AlertDialog.Builder(this).create()
+            alertdialog.setTitle("Log out")
+            alertdialog.setMessage("Are you sure you want to logout?")
+            alertdialog.setButton(AlertDialog.BUTTON_POSITIVE,"yes"){
+                dialog, which ->  finishAffinity();
+                System.exit(0);
+                dialog.dismiss()
+            }
+            alertdialog.setButton(AlertDialog.BUTTON_NEGATIVE,"No"){
+                dialog, which ->
+                dialog.dismiss()
+            }
+            alertdialog.show()
+        }
+        }
             }
 
-    }

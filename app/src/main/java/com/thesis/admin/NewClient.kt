@@ -24,5 +24,11 @@ class NewClient : AppCompatActivity() {
             val intent = Intent(this, Save_client::class.java)
             startActivity(intent)
         }
+
+        val button3 = findViewById<Button>(R.id.updateclient)
+        button3.setOnClickListener{
+            val intent = Intent(this, U_client_Info::class.java)
+            startActivity(intent)
+        }
     }
 }
