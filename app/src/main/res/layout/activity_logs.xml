@@ -35,6 +35,11 @@
             android:padding="20dp"
             android:layout_marginTop="15dp" />
     </com.google.android.material.textfield.TextInputLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -240,13 +245,8 @@
 
 
         </TableRow>
-
-
-
-
-
     </TableLayout>
-
+   </ScrollView>
     <Button
         android:id="@+id/back_toclientlogs"
         android:layout_width="match_parent"
