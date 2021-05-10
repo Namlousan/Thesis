@@ -42,7 +42,8 @@
             android:hint="Access"
             android:textColor="@color/black"
             android:padding="20dp"
-            android:layout_marginTop="15dp"/>
+            android:layout_marginTop="15dp"
+            android:maxLines="1"/>
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -55,11 +56,10 @@
         android:textColor="@color/black"/>
 
     <ScrollView
-        android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical"
-        android:fillViewport="true">
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
 
         <TextView
             android:scrollbars="vertical"
@@ -68,7 +68,8 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="1.0"
-            android:text="Lorem ipsum dolor sit amet, orem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"/>
+            android:text="Lorem ipsum dolor sit amet, orem ipsum dolor sit ametconsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+             minim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisiminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"/>
     </ScrollView>
 
 
@@ -79,17 +80,12 @@
         android:orientation="horizontal"
         android:padding="20dp">
 
-        <Button
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="null"/>
+
 
         <Button
-            android:layout_gravity="right"
             android:id="@+id/back2"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
             android:text="back"/>
     </LinearLayout>
 

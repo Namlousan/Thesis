@@ -31,8 +31,8 @@
                 android:id="@+id/Username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textVisiblePassword|textNoSuggestions"
-                android:maxLength="12" />
+                android:inputType="textEmailAddress"
+                android:maxLength="20"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>

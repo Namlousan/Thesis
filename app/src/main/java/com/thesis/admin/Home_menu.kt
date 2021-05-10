@@ -28,6 +28,12 @@ class Home_menu : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val parking = findViewById<CardView>(R.id.parkinglots)
+        parking.setOnClickListener {
+            val intent = Intent(this, ParkingLots::class.java)
+            startActivity(intent)
+        }
+
 
             val secure = findViewById<CardView>(R.id.security1)
             secure.setOnClickListener {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home_menu"
+    tools:context=".Tables_1"
     android:background="@color/white">
 
     <LinearLayout
@@ -15,7 +15,7 @@
             android:layout_margin="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HOME MENU"
+            android:text="HISTORY TABLES"
             android:textSize="30sp"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/black"
@@ -26,17 +26,18 @@
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:columnCount="1"
-            android:rowCount="4"
+            android:columnCount="2"
+            android:rowCount="3"
             android:layout_marginLeft="5dp"
             android:layout_margin="5dp"
             android:alignmentMode="alignMargins"
             android:layout_gravity="center_horizontal"
             android:columnOrderPreserved="false">
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/client"
-                android:layout_width="match_parent"
+                android:id="@+id/clientApp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
@@ -52,12 +53,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/client"
+                        android:src="@drawable/ic_launcher_foreground"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Client"
+                        android:text="Client App"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:layout_marginTop="5dp"/>
@@ -65,8 +66,8 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/parkinglots"
-                android:layout_width="match_parent"
+                android:id="@+id/AdminApp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
@@ -82,42 +83,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/parkavail"
+                        android:src="@drawable/ic_launcher_foreground"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Parking Lot Availability"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:layout_marginTop="5dp"/>
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/Appmoni"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
-                android:layout_margin="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/appmoni"
-                        android:layout_marginTop="12dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="App Monitoring"
+                        android:text="Admin App"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:layout_marginTop="5dp"/>
@@ -125,8 +96,8 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/security1"
-                android:layout_width="match_parent"
+                android:id="@+id/secuApp"
+                android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
@@ -142,12 +113,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/securiy"
+                        android:src="@drawable/ic_launcher_foreground"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Security"
+                        android:text="Security App"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:layout_marginTop="5dp"/>
@@ -155,7 +126,7 @@
 
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
-                android:id="@+id/logout"
+                android:id="@+id/backtohomeH"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardCornerRadius="12dp"
@@ -170,14 +141,14 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/exit"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/logomakr_6fmgxh"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Log-out"
+                        android:text="Back to Home"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:layout_marginTop="5dp"/>
