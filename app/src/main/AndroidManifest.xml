@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ADMIN">
-        <activity android:name=".parking_law"></activity>
+        <activity android:name=".Che_parking"></activity>
+        <activity android:name=".OOP" />
+        <activity android:name=".captcha" />
+        <activity android:name=".Heroes_park" />
+        <activity android:name=".ParkingLots" />
+        <activity android:name=".ConParking" />
+        <activity android:name=".parking_law" />
         <activity android:name=".Tables_1" />
         <activity android:name=".SecurityApphistory" />
         <activity android:name=".AdminApphistory" />

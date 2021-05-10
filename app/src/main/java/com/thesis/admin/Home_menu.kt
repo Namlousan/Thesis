@@ -30,7 +30,7 @@ class Home_menu : AppCompatActivity() {
 
         val parking = findViewById<CardView>(R.id.parkinglots)
         parking.setOnClickListener {
-            val intent = Intent(this, parking_law::class.java)
+            val intent = Intent(this, ParkingLots::class.java)
             startActivity(intent)
         }
 
