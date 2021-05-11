@@ -40,18 +40,17 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/password"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:hint="Password"
             app:passwordToggleEnabled="true"
             app:hintTextColor="@color/black"
             app:startIconDrawable="@drawable/lock">
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adminpass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
-                android:maxLength="12"
-                android:id="@+id/Password"/>
+                android:maxLength="12"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

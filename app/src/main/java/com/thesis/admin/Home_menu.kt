@@ -22,6 +22,7 @@ class Home_menu : AppCompatActivity() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar()?.hide();
+
         val cardView = findViewById<CardView>(R.id.client)
         cardView.setOnClickListener {
             val intent = Intent(this, Client::class.java)

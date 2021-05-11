@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ADMIN">
-        <activity android:name=".Che_parking"></activity>
+        <activity android:name=".RegiterNewClient"></activity>
+        <activity android:name=".Che_parking" />
         <activity android:name=".OOP" />
         <activity android:name=".captcha" />
         <activity android:name=".Heroes_park" />
