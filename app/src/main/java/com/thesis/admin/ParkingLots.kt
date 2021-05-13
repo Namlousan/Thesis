@@ -48,5 +48,10 @@ class ParkingLots : AppCompatActivity() {
             val intent = Intent(this, Che_parking::class.java)
             startActivity(intent)
         }
+        val PL = findViewById<CardView>(R.id.parkinglogs)
+        PL.setOnClickListener {
+            val intent = Intent(this, ParkingLOGS::class.java)
+            startActivity(intent)
+        }
     }
 }
