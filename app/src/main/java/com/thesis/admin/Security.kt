@@ -36,5 +36,6 @@ class Security : AppCompatActivity() {
             val intent = Intent(this, Manuals::class.java)
             startActivity(intent)
         }
+
         }
 }

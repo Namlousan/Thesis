@@ -3,12 +3,14 @@ package com.thesis.admin
 import android.annotation.TargetApi
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
+import org.apache.commons.lang3.RandomStringUtils
 
 class U_client_Info : AppCompatActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -21,7 +23,6 @@ class U_client_Info : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar()?.hide();
         val button = findViewById<Button>(R.id.clearfields)
-        val edittext1 =findViewById<EditText>(R.id.clientcode)
         val edittext2 =findViewById<EditText>(R.id.branch)
         val edittext3 =findViewById<EditText>(R.id.emp_id)
         val edittext4 =findViewById<EditText>(R.id.dept)
@@ -34,7 +35,6 @@ class U_client_Info : AppCompatActivity() {
         val edittext11 =findViewById<EditText>(R.id.model)
         val edittext12 =findViewById<EditText>(R.id.color)
         button.setOnClickListener {
-            edittext1.setText("")
             edittext2.setText("")
             edittext3.setText("")
             edittext4.setText("")
@@ -57,4 +57,9 @@ class U_client_Info : AppCompatActivity() {
             val intent = Intent(this, Client::class.java)
             startActivity(intent)
 
-    }}}
+
+    }
+        val randonString: String = RandomStringUtils.randomAlphanumeric(9)
+        val textView =findViewById<TextView>(R.id.clientcode)
+        textView.setText("FOMICS"+randonString)
+    }}

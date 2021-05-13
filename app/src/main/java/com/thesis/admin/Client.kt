@@ -23,7 +23,7 @@ class Client : AppCompatActivity() {
 
         val cardView1 = findViewById<CardView>(R.id.new_client)
         cardView1.setOnClickListener {
-            val intent = Intent(this, RegisterNewClient::class.java)
+            val intent = Intent(this, NewClient::class.java)
             startActivity(intent)
         }
 
