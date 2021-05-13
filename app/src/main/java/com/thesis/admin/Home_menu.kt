@@ -1,17 +1,17 @@
 package com.thesis.admin
 
 import android.annotation.TargetApi
-import android.app.PendingIntent.getActivity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
 import android.view.WindowManager
-import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.google.firebase.auth.FirebaseAuth
+
 
 class Home_menu : AppCompatActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -49,8 +49,11 @@ class Home_menu : AppCompatActivity() {
             alertdialog.setMessage("Are you sure you want to logout?")
             alertdialog.setButton(AlertDialog.BUTTON_POSITIVE,"yes"){
                 dialog, which ->  finishAffinity();
-                System.exit(0);
-                dialog.dismiss()
+                FirebaseAuth.getInstance().signOut()
+               val intent =Intent(this, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+
             }
             alertdialog.setButton(AlertDialog.BUTTON_NEGATIVE,"No"){
                 dialog, which ->

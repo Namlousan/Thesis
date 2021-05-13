@@ -5,11 +5,13 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import org.apache.commons.lang3.RandomStringUtils
 
 class RegisterNewClient : AppCompatActivity() {
 
@@ -20,6 +22,9 @@ class RegisterNewClient : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regiter_new_client)
+        val randonString: String = RandomStringUtils.randomAlphanumeric(9)
+        val textView =findViewById<TextView>(R.id.clientcode)
+        textView.setText("FOMICS"+randonString)
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
@@ -28,7 +33,6 @@ class RegisterNewClient : AppCompatActivity() {
 
         register()
     }
-
     private fun register(){
 
         val regButton = findViewById<Button>(R.id.saveclient)
@@ -41,6 +45,7 @@ class RegisterNewClient : AppCompatActivity() {
         val fname = findViewById<EditText>(R.id.fname)
         val email = findViewById<EditText>(R.id.email)
         val pass = findViewById<EditText>(R.id.pass)
+        val textView =findViewById<TextView>(R.id.clientcode)
 
         regButton.setOnClickListener{
 
@@ -83,13 +88,12 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("firtname")?.setValue(fname.text.toString())
                         currentUserDb?.child("email")?.setValue(email.text.toString())
                         currentUserDb?.child("clientcode")?.setValue(pass.text.toString())
-
                         Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
                             this@RegisterNewClient,
-                            "Registration Failed, try agian!",
+                            "Registration Failed, try again!",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -100,4 +104,5 @@ class RegisterNewClient : AppCompatActivity() {
             startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
         }
     }
+
 }
