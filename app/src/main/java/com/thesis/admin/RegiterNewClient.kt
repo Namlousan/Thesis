@@ -11,7 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class RegisterNewClient : AppCompatActivity() {
+class RegiterNewClient : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
     var databaseReference : DatabaseReference? = null
@@ -84,11 +84,11 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("email")?.setValue(email.text.toString())
                         currentUserDb?.child("clientcode")?.setValue(pass.text.toString())
 
-                        Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@RegiterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
-                            this@RegisterNewClient,
+                            this@RegiterNewClient,
                             "Registration Failed, try agian!",
                             Toast.LENGTH_LONG
                         ).show()
@@ -97,7 +97,7 @@ class RegisterNewClient : AppCompatActivity() {
 
         }
         backtoclientmenu.setOnClickListener{
-            startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
+            startActivity(Intent(this@RegiterNewClient, Client::class.java))
         }
     }
 }

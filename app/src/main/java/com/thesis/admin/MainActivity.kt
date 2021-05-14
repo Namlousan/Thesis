@@ -95,7 +95,7 @@ import com.google.firebase.auth.FirebaseAuth
             val forgot = findViewById<Button>(R.id.forgot)
 
             forgot.setOnClickListener {
-                startActivity(Intent(this@MainActivity, RegisterNewClient::class.java))
+                startActivity(Intent(this@MainActivity, Home_menu::class.java))
                     finish()
                 }
 

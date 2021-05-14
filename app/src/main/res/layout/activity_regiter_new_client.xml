@@ -10,7 +10,7 @@
         android:background="@color/maroon"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        tools:context=".RegisterNewClient"
+        tools:context=".RegiterNewClient"
         android:orientation="vertical"
         >
 
@@ -97,7 +97,7 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_bg_by_lever"
                     android:hint="BSU Main"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textStyle="bold"
                     android:autofillHints="campus"
                     android:inputType="text"
