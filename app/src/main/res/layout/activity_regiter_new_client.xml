@@ -8,7 +8,7 @@
     >
 
     <LinearLayout
-        android:background="@color/maroon"
+        android:background="#542e71"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
@@ -99,7 +99,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_bg_by_lever"
                     android:hint="BSU Main"
-                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:autofillHints="campus"
                     android:inputType="text"
@@ -153,7 +152,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="College of Science"
-                    android:textColor="@color/white"
                     android:background="@drawable/btn_bg_by_lever"
                     android:textStyle="bold"
                     android:autofillHints="campus"
@@ -181,7 +179,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="CS"
-                    android:textColor="@color/white"
                     android:background="@drawable/btn_bg_by_lever"
                     android:textStyle="bold" />
 
@@ -207,7 +204,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_bg_by_lever"
                     android:hint="Dela Cruz"
-                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:autofillHints="campus"
                     android:inputType="text"
@@ -236,7 +232,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_bg_by_lever"
                     android:hint="Juan"
-                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -261,7 +256,6 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/btn_bg_by_lever"
                     android:hint="Enter valid email"
-                    android:textColor="@color/white"
                     android:textStyle="bold"
                     android:autofillHints="campus"
                     android:inputType="textEmailAddress"
@@ -327,12 +321,12 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/platenum"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/btn_bg_by_lever"
                         android:hint="e.g. NBJ 4332"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:autofillHints="campus"
                         android:inputType="textPhonetic"
@@ -354,12 +348,12 @@
                         android:textStyle="bold" />
 
                     <EditText
+                        android:id="@+id/brand"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/btn_bg_by_lever"
                         android:hint="e.g. Toyota Innova"
-                        android:textColor="@color/white"
                         android:textStyle="bold"
                         android:autofillHints="campus"
                         android:inputType="text"
@@ -380,12 +374,14 @@
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/colorvehicle"
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:text="Gray"
-                        android:textColor="@color/black"
+                        android:hint="Gray"
+                        android:inputType="text"
+                        android:background="@drawable/btn_bg_by_lever"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -434,6 +430,7 @@
             android:id="@+id/saveclient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#7b6079"
             android:text="Save Client Informations"/>
         <Button
             android:layout_marginTop="15dp"
