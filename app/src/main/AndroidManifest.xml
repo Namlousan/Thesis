@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.thesis.admin">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -8,8 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ADMIN">
-        <activity android:name=".Che_parking"></activity>
+        android:theme="@style/Theme.ADMIN"
+        android:usesCleartextTraffic="true"
+        >
+        <activity android:name=".Che_parking">
+
+        </activity>
         <activity android:name=".OOP" />
         <activity android:name=".captcha" />
         <activity android:name=".Heroes_park" />
@@ -45,6 +50,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

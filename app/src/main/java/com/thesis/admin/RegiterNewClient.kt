@@ -5,13 +5,15 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import org.apache.commons.lang3.RandomStringUtils
 
-class RegiterNewClient : AppCompatActivity() {
+class RegisterNewClient : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
     var databaseReference : DatabaseReference? = null
@@ -84,11 +86,11 @@ class RegiterNewClient : AppCompatActivity() {
                         currentUserDb?.child("email")?.setValue(email.text.toString())
                         currentUserDb?.child("clientcode")?.setValue(pass.text.toString())
 
-                        Toast.makeText(this@RegiterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
-                            this@RegiterNewClient,
+                            this@RegisterNewClient,
                             "Registration Failed, try agian!",
                             Toast.LENGTH_LONG
                         ).show()
@@ -97,7 +99,7 @@ class RegiterNewClient : AppCompatActivity() {
 
         }
         backtoclientmenu.setOnClickListener{
-            startActivity(Intent(this@RegiterNewClient, Client::class.java))
+            startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
         }
     }
 }

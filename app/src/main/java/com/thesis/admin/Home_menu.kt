@@ -1,19 +1,20 @@
 package com.thesis.admin
 
 import android.annotation.TargetApi
-import android.app.PendingIntent.getActivity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
+
+
 
 class Home_menu : AppCompatActivity() {
 
@@ -22,9 +23,6 @@ class Home_menu : AppCompatActivity() {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
-
-        authAdmin = FirebaseAuth.getInstance()
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_menu)
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -34,12 +32,6 @@ class Home_menu : AppCompatActivity() {
         val cardView = findViewById<CardView>(R.id.client)
         cardView.setOnClickListener {
             val intent = Intent(this, Client::class.java)
-            startActivity(intent)
-        }
-
-        val appmonitor = findViewById<CardView>(R.id.Appmoni)
-        appmonitor.setOnClickListener {
-            val intent = Intent(this, Administrators::class.java)
             startActivity(intent)
         }
 
@@ -62,9 +54,12 @@ class Home_menu : AppCompatActivity() {
             alertdialog.setTitle("Log out")
             alertdialog.setMessage("Are you sure you want to logout?")
             alertdialog.setButton(AlertDialog.BUTTON_POSITIVE,"yes"){
-                dialog, which ->  authAdmin.signOut();
-                startActivity(Intent(this@Home_menu, MainActivity::class.java))
+                dialog, which ->  finishAffinity();
+                FirebaseAuth.getInstance().signOut()
+               val intent =Intent(this, MainActivity::class.java)
+                startActivity(intent)
                 finish()
+
             }
             alertdialog.setButton(AlertDialog.BUTTON_NEGATIVE,"No"){
                 dialog, which ->

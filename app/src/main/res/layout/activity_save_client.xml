@@ -20,15 +20,22 @@
         android:fontFamily="sans-serif-black"/>
 
     <ImageView
+        android:id="@+id/qr"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/louie"
+        android:src="@mipmap/ic_launcher"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="80dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Try to Scan QR-PASS"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/fetched_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         android:textColor="@color/black"/>
 
     <Button
