@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         tools:context=".NewClient"
         android:orientation="vertical"
-        android:background="@color/maroon">
+        android:background="#351632">
 
     <TextView
         android:layout_margin="20dp"
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:text="REGISTER CLIENT"
         android:textSize="30sp"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/prompt_extrabold"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"/>
@@ -27,17 +27,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="#673d61">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Client number"
             android:textAlignment="textEnd"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
     <LinearLayout
-        android:background="@color/white"
+        android:background="#673d61"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:text="Client Code:"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textAllCaps="true"/>
 
@@ -64,7 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/white">
+        android:background="#673d61">
 
         <TextView
             android:layout_width="match_parent"
@@ -73,9 +73,10 @@
             android:layout_marginTop="20dp"
             android:text="-----Client Personal Informations-----"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="#06FFEA"
             android:textSize="20sp"
             android:textStyle="bold" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,7 +88,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Branch:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -116,7 +117,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Employee ID:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -144,7 +145,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Department:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -173,7 +174,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Department Code:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -198,7 +199,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Last Name:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -228,7 +229,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="First Name:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -254,7 +255,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Email Address:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <EditText
@@ -283,7 +284,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Access Code:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 android:singleLine="true"/>
 
@@ -305,7 +306,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/white">
+            android:background="#673d61">
 
             <TextView
                 android:layout_width="match_parent"
@@ -314,7 +315,7 @@
                 android:layout_marginTop="20dp"
                 android:text="-----Client Vehicle Informations-----"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="#06FFEA"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <LinearLayout
@@ -328,7 +329,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:text="Plate Number:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <EditText
@@ -355,7 +356,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:text="Brand/Model:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <EditText
@@ -382,7 +383,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:text="Color:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
                 <EditText
@@ -407,7 +408,7 @@
             android:layout_marginTop="20dp"
             android:text="-----Client Validity Information-----"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="#06FFEA"
             android:textSize="20sp"
             android:textStyle="bold" />
         <LinearLayout
@@ -421,7 +422,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
                 android:text="Validity Period:"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <TextView
@@ -429,7 +430,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="12 hours"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -443,19 +444,25 @@
         android:id="@+id/updateclient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update Client Information"/>
+        android:text="Update Client Information"
+        android:background="@drawable/button"
+        android:textColor="@color/black"/>
     <Button
         android:layout_marginTop="15dp"
         android:id="@+id/saveclient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save Client Informations"/>
+        android:text="Save Client Informations"
+        android:background="@drawable/button"
+        android:textColor="@color/black"/>
     <Button
         android:layout_marginTop="15dp"
         android:id="@+id/backtoclientmenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back to client menu"/>
+        android:text="Back to client menu"
+        android:background="@drawable/button"
+        android:textColor="@color/black"/>
 
 
 

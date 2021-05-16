@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_menu"
-    android:background="@color/white">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:text="CLIENT"
             android:textSize="30sp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/black"
+            android:fontFamily="@font/prompt_extrabold"
+            android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"/>
 
@@ -37,9 +37,9 @@
                 android:id="@+id/new_client"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="38dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -51,7 +51,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/clientadd"
+                        android:src="@drawable/addclient"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -67,9 +67,9 @@
                 android:id="@+id/update_client"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="38dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -81,7 +81,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/clientupd"
+                        android:src="@drawable/update"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -97,9 +97,9 @@
                 android:id="@+id/logs"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="38dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -112,7 +112,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:layout_marginTop="12dp"
-                        android:src="@drawable/clientqr" />
+                        android:src="@drawable/qr" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -128,9 +128,9 @@
                 android:id="@+id/clientstng"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
+                app:cardCornerRadius="38dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -142,14 +142,14 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/clientset"
+                        android:src="@drawable/settings"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Client Settings"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
@@ -170,9 +170,9 @@
                     android:gravity="center">
 
                     <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@drawable/logomakr_6fmgxh"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/back"
                         android:layout_marginTop="12dp" />
                 </LinearLayout>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Security"
-    android:background="@color/white">
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,8 +17,8 @@
             android:layout_height="wrap_content"
             android:text="SECURITY"
             android:textSize="30sp"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/black"
+            android:fontFamily="@font/prompt_extrabold"
+            android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
             android:textAlignment="center"/>
 
@@ -36,9 +36,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
+                app:cardCornerRadius="38dp"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -50,12 +50,12 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_launcher_foreground"
+                        android:src="@drawable/registeradmin"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Register Administrator"
+                        android:text="Register Admin"
                         android:textColor="@color/white"
                         android:textSize="15sp"
                         android:layout_marginTop="5dp"/>
@@ -66,9 +66,9 @@
                 android:id="@+id/admins"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
+                app:cardCornerRadius="38dp"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -80,14 +80,14 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_launcher_foreground"
+                        android:src="@drawable/admin"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Administrator/s"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="16sp"
                         android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
@@ -95,9 +95,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
+                app:cardCornerRadius="38dp"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -109,7 +109,7 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_launcher_foreground"
+                        android:src="@drawable/adminlogs"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -125,9 +125,9 @@
                 android:id="@+id/manual"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
+                app:cardCornerRadius="38dp"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -155,9 +155,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
                 app:cardElevation="5dp"
-                app:cardBackgroundColor="@color/maroon"
+                app:cardBackgroundColor="#CC808A9F"
+                app:cardCornerRadius="38dp"
                 android:layout_margin="10dp">
 
                 <LinearLayout
@@ -169,14 +169,14 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_launcher_foreground"
+                        android:src="@drawable/help"
                         android:layout_marginTop="12dp"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Help"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
+                        android:textSize="17sp"
                         android:layout_marginTop="5dp"/>
                 </LinearLayout>
 
