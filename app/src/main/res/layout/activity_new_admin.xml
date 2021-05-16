@@ -17,7 +17,7 @@
             android:layout_margin="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register New Admin"
+            android:text="Register SG"
             android:textSize="20sp"
             android:fontFamily="sans-serif-black"
             android:textColor="@color/white"
@@ -67,61 +67,6 @@
                     android:hint="1234"
                     android:inputType="textPhonetic"
                     android:padding="2dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Department:"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/admindept"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:autofillHints="campus"
-                    android:background="@drawable/btn_bg_by_lever"
-                    android:hint="College of Science"
-                    android:inputType="text"
-                    android:padding="2dp"
-                    android:textColor="@color/white"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Department Code:"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/admindeptcode"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/btn_bg_by_lever"
-                    android:hint="CS"
-                    android:textColor="@color/white"
                     android:textStyle="bold" />
 
             </LinearLayout>

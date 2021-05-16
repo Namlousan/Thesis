@@ -100,9 +100,10 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("lastname")?.setValue(lname.text.toString())
                         currentUserDb?.child("firtname")?.setValue(fname.text.toString())
                         currentUserDb?.child("email")?.setValue(email.text.toString())
-                        currentUserDb?.child("plateNumber")?.setValue(pass.text.toString())
-                        currentUserDb?.child("vehicleBrand")?.setValue(pass.text.toString())
-                        currentUserDb?.child("vehicleColor")?.setValue(pass.text.toString())
+                        currentUserDb?.child("password")?.setValue(pass.text.toString())
+                        currentUserDb?.child("plateNumber")?.setValue(platenum.text.toString())
+                        currentUserDb?.child("vehicleBrand")?.setValue(brand.text.toString())
+                        currentUserDb?.child("vehicleColor")?.setValue(colorvehicle.text.toString())
 
                         Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
