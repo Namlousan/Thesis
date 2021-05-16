@@ -1,136 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".New_admin"
-    android:orientation="vertical"
-    android:padding="20dp">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="REGISTER NEW ADMIN"
-        android:textColor="@color/black"
-        android:textSize="25sp"
-        android:fontFamily="sans-serif-black"
-        android:textAlignment="center"/>
-
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:padding="20dp"
-        android:layout_width="match_parent"
+        android:background="@color/maroon"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        tools:context=".New_admin"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="150dp"
+            android:layout_margin="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Admin ID:"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="1234345"
+            android:text="Register New Admin"
             android:textSize="20sp"
-            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
             android:textAlignment="center"/>
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="522dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="-----Admin Personal Informations-----"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Employee ID:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/adminID"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="id"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="1234"
+                    android:inputType="textPhonetic"
+                    android:padding="2dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Department:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/admindept"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="campus"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="College of Science"
+                    android:inputType="text"
+                    android:padding="2dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Department Code:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/admindeptcode"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="CS"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Full Name:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/adminName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="campus"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="Juan Dela Cruz"
+                    android:inputType="text"
+                    android:padding="2dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Email Address:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/emailaddress"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="campus"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="Enter valid email"
+                    android:inputType="textEmailAddress"
+                    android:padding="2dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Access Code:"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/adminpass"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="campus"
+                    android:background="@drawable/btn_bg_by_lever"
+                    android:hint="access code"
+                    android:inputType="numberPassword"
+                    android:padding="2dp"
+                    android:textColor="@color/teal_200"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/regbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Admin Informations"/>
+        <Button
+            android:layout_marginTop="15dp"
+            android:id="@+id/backbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Back to Home menu"/>
+
+
     </LinearLayout>
-    <LinearLayout
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Admin Name:"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Dahyun"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
+</ScrollView>
 
 
-    </LinearLayout>
-    <LinearLayout
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Admin Password:"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Louie Pogi"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Department:"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="College of Science"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:padding="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="Department Code:"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_marginTop="12dp"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:text="CS"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:textAlignment="center"/>
-
-
-    </LinearLayout>
-
-    <Button
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="60dp"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:text="back"/>
-
-</LinearLayout>

@@ -18,6 +18,7 @@
         <activity android:name=".OOP" />
         <activity android:name=".captcha" />
         <activity android:name=".Heroes_park" />
+        <activity android:name=".RegiterNewClient" />
         <activity android:name=".ParkingLots" />
         <activity android:name=".ConParking" />
         <activity android:name=".parking_law" />

@@ -6,6 +6,8 @@ import android.content.SharedPreferences
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.Button
+import android.widget.ImageView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +15,11 @@ import androidx.cardview.widget.CardView
 import com.google.firebase.auth.FirebaseAuth
 
 
+
 class Home_menu : AppCompatActivity() {
+
+    lateinit var authAdmin: FirebaseAuth
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {

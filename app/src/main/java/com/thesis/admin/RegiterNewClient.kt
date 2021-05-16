@@ -22,9 +22,6 @@ class RegisterNewClient : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regiter_new_client)
-        val randonString: String = RandomStringUtils.randomAlphanumeric(9)
-        val textView =findViewById<TextView>(R.id.clientcode)
-        textView.setText("FOMICS"+randonString)
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
@@ -33,6 +30,7 @@ class RegisterNewClient : AppCompatActivity() {
 
         register()
     }
+
     private fun register(){
 
         val regButton = findViewById<Button>(R.id.saveclient)
@@ -45,7 +43,10 @@ class RegisterNewClient : AppCompatActivity() {
         val fname = findViewById<EditText>(R.id.fname)
         val email = findViewById<EditText>(R.id.email)
         val pass = findViewById<EditText>(R.id.pass)
-        val textView =findViewById<TextView>(R.id.clientcode)
+        val platenum = findViewById<EditText>(R.id.platenum)
+        val brand = findViewById<EditText>(R.id.brand)
+        val colorvehicle = findViewById<EditText>(R.id.colorvehicle)
+
 
         regButton.setOnClickListener{
 
@@ -73,7 +74,19 @@ class RegisterNewClient : AppCompatActivity() {
             }else if (TextUtils.isEmpty(pass.text.toString())) {
                 pass.setError("Please enter your ID number")
                 return@setOnClickListener
+            }else if (TextUtils.isEmpty(platenum.text.toString())) {
+                platenum.setError("Please enter your ID number")
+                return@setOnClickListener
+            }else if (TextUtils.isEmpty(brand.text.toString())) {
+                brand.setError("Please enter your ID number")
+                return@setOnClickListener
+            }else if (TextUtils.isEmpty(colorvehicle.text.toString())) {
+                colorvehicle.setError("Please enter your ID number")
+                return@setOnClickListener
             }
+
+
+
 
             auth.createUserWithEmailAndPassword(email.text.toString(),pass.text.toString() )
                 .addOnCompleteListener{
@@ -87,13 +100,16 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("lastname")?.setValue(lname.text.toString())
                         currentUserDb?.child("firtname")?.setValue(fname.text.toString())
                         currentUserDb?.child("email")?.setValue(email.text.toString())
-                        currentUserDb?.child("clientcode")?.setValue(pass.text.toString())
+                        currentUserDb?.child("plateNumber")?.setValue(pass.text.toString())
+                        currentUserDb?.child("vehicleBrand")?.setValue(pass.text.toString())
+                        currentUserDb?.child("vehicleColor")?.setValue(pass.text.toString())
+
                         Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
                             this@RegisterNewClient,
-                            "Registration Failed, try again!",
+                            "Registration Failed, try agian!",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -104,5 +120,4 @@ class RegisterNewClient : AppCompatActivity() {
             startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
         }
     }
-
 }
