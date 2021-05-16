@@ -28,6 +28,11 @@ class Home_menu : AppCompatActivity() {
             val intent = Intent(this, Client::class.java)
             startActivity(intent)
         }
+        val appmoni = findViewById<CardView>(R.id.Appmoni)
+        appmoni.setOnClickListener {
+            val intent = Intent(this, Client_history_table::class.java)
+            startActivity(intent)
+        }
 
         val parking = findViewById<CardView>(R.id.parkinglots)
         parking.setOnClickListener {
