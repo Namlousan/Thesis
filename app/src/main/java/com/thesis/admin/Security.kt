@@ -20,6 +20,11 @@ class Security : AppCompatActivity() {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar()?.hide();
 
+        val regsecu = findViewById<CardView>(R.id.regsecu)
+        regsecu.setOnClickListener {
+            val intent = Intent(this, RegAdmin::class.java)
+            startActivity(intent)
+        }
 
         val cardView = findViewById<CardView>(R.id.backtohome)
         cardView.setOnClickListener {

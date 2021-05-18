@@ -25,6 +25,8 @@ class Administrators : AppCompatActivity() {
         databaseAdmin = FirebaseDatabase.getInstance()
         databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB")
 
+
+
         loadProfile()
     }
 

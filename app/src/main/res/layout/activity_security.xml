@@ -24,7 +24,7 @@
 
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:columnCount="2"
             android:rowCount="3"
@@ -34,6 +34,7 @@
             android:columnOrderPreserved="false">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/regsecu"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:cardElevation="5dp"
@@ -62,6 +63,7 @@
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/admins"
                 android:layout_width="150dp"

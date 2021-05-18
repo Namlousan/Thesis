@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.apache.commons.lang3.RandomStringUtils
 
-class RegisterNewClient : AppCompatActivity() {
+class RegiterNewClient : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
     var databaseReference : DatabaseReference? = null
@@ -25,7 +25,7 @@ class RegisterNewClient : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("ClientDb")
+        databaseReference = database?.reference!!.child("AdminDB").child("Users").child("Clients")
 
 
         register()
@@ -105,11 +105,11 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("vehicleBrand")?.setValue(brand.text.toString())
                         currentUserDb?.child("vehicleColor")?.setValue(colorvehicle.text.toString())
 
-                        Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@RegiterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
-                            this@RegisterNewClient,
+                            this@RegiterNewClient,
                             "Registration Failed, try agian!",
                             Toast.LENGTH_LONG
                         ).show()
@@ -118,7 +118,7 @@ class RegisterNewClient : AppCompatActivity() {
 
         }
         backtoclientmenu.setOnClickListener{
-            startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
+            startActivity(Intent(this@RegiterNewClient, Home_menu::class.java))
         }
     }
 }

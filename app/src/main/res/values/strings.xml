@@ -12,4 +12,5 @@
     <string name="col1">ID</string>
     <string name="col2">Name</string>
     <string name="row1">1</string>
+    <string name="asadmin">Admin</string>
 </resources>
