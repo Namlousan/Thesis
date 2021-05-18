@@ -25,14 +25,14 @@ class RegiterNewClient : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("AdminDB").child("Users").child("Clients")
+        databaseReference = database?.reference!!.child("ClientDb")
 
 
         register()
     }
 
     private fun register(){
-
+        val asclient = findViewById<TextView>(R.id.asclient)
         val regButton = findViewById<Button>(R.id.saveclient)
         val backtoclientmenu = findViewById<Button>(R.id.backtoclientmenu)
         val branch = findViewById<EditText>(R.id.branch)
@@ -93,6 +93,7 @@ class RegiterNewClient : AppCompatActivity() {
                     if(it.isSuccessful){
                         val currentUser = auth.currentUser
                         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
+                        currentUserDb?.child("as")?.setValue(asclient.text.toString())
                         currentUserDb?.child("branch")?.setValue(branch.text.toString())
                         currentUserDb?.child("empid")?.setValue(empid.text.toString())
                         currentUserDb?.child("department")?.setValue(deptartment.text.toString())

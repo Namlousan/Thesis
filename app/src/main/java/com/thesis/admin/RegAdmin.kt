@@ -31,7 +31,7 @@ class RegAdmin : AppCompatActivity() {
     }
 
     private fun registeradmin() {
-        val asadmin = findViewById<EditText>(R.id.asadmin)
+
         val adminID = findViewById<EditText>(R.id.adminID)
         val adminName = findViewById<EditText>(R.id.adminName)
         val adminpass = findViewById<EditText>(R.id.adminpass)
@@ -62,7 +62,6 @@ class RegAdmin : AppCompatActivity() {
 
                         val currentUserAdmin = authAdmin.currentUser
                         val currentUserAdminDB = databaseReferenceAdmin?.child((currentUserAdmin?.uid!!))
-                        currentUserAdminDB?.child("AdminID")?.setValue(asadmin.text.toString())
                         currentUserAdminDB?.child("AdminID")?.setValue(adminID.text.toString())
                         currentUserAdminDB?.child("AdminName")?.setValue(adminName.text.toString())
                         currentUserAdminDB?.child("EmailAddress")?.setValue(emailaddress.text.toString())

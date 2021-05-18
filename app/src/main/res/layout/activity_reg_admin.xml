@@ -41,31 +41,6 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Employee ID:"
-                    android:textColor="@color/black"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/asadmin"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="@string/asadmin"
-                    android:background="@drawable/btn_bg_by_lever"
-                    android:padding="2dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
