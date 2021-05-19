@@ -63,31 +63,35 @@ import com.google.firebase.database.*
                     )
                             .addOnCompleteListener {
                                 if (it.isSuccessful) {
-
                                     authAdmin = FirebaseAuth.getInstance()
                                     databaseAdmin = FirebaseDatabase.getInstance()
                                     val currentUserAdmin = authAdmin.currentUser
-                                    val RegisteredUserID = currentUserAdmin.getUid()
+                                    val registeredUserID = currentUserAdmin.getUid()
 
-                                    databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB").child(RegisteredUserID)
+                                    databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB").child(registeredUserID)
 
-                                    databaseReferenceAdmin?.addValueEventListener(object : ValueEventListener {
-                                        override fun onDataChange(snapshot: DataSnapshot) {
-                                            val AdminDB = snapshot.child("as").value.toString()
-                                            if (AdminDB.equals("Admin")) {
-                                                startActivity(Intent(this@MainActivity, Home_menu::class.java))
+                                    if(currentUserAdmin.isEmailVerified){
+                                        databaseReferenceAdmin?.addValueEventListener(object : ValueEventListener {
+                                            override fun onDataChange(snapshot: DataSnapshot) {
+                                                val AdminDB = snapshot.child("as").value.toString()
+                                                if (AdminDB.equals("Admin")) {
+                                                    startActivity(Intent(this@MainActivity, Home_menu::class.java))
 
-                                            }else {
-                                                Toast.makeText(this@MainActivity, "Login failed", Toast.LENGTH_LONG)
-                                                        .show()
+                                                }else {
+                                                    Toast.makeText(this@MainActivity, "Login failed", Toast.LENGTH_LONG)
+                                                            .show()
+                                                }
+
                                             }
 
-                                        }
-
-                                        override fun onCancelled(error: DatabaseError) {
-                                            TODO("Not yet implemented")
-                                        }
-                                    })
+                                            override fun onCancelled(error: DatabaseError) {
+                                                TODO("Not yet implemented")
+                                            }
+                                        })
+                                    }else{
+                                        Toast.makeText(this@MainActivity, "Login failed! Please verify your Email", Toast.LENGTH_LONG)
+                                                .show()
+                                    }
 
                                 } else {
                                     Toast.makeText(this@MainActivity, "Login failed", Toast.LENGTH_LONG)

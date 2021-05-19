@@ -51,37 +51,37 @@ class RegiterNewClient : AppCompatActivity() {
         regButton.setOnClickListener{
 
             if (TextUtils.isEmpty(branch.text.toString())){
-                branch.setError("Please enter your last name")
+                branch.setError("Please enter branch")
                 return@setOnClickListener
             }else if(TextUtils.isEmpty(empid.text.toString())) {
-                empid.setError("Please enter your last name")
+                empid.setError("Please enter Employee ID")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(deptartment.text.toString())) {
-                deptartment.setError("Please enter your email")
+                deptartment.setError("Please enter College")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(depcode.text.toString())) {
-                depcode.setError("Please enter your ID number")
+                depcode.setError("Please enter departmet code")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(lname.text.toString())) {
-                lname.setError("Please enter your ID number")
+                lname.setError("Please enter client's last name")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(fname.text.toString())) {
-                fname.setError("Please enter your ID number")
+                fname.setError("Please enter client's lirst Name")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(email.text.toString())) {
-                email.setError("Please enter your ID number")
+                email.setError("Please enter valid email")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(pass.text.toString())) {
-                pass.setError("Please enter your ID number")
+                pass.setError("Please enter access code")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(platenum.text.toString())) {
-                platenum.setError("Please enter your ID number")
+                platenum.setError("Please enter PL Number")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(brand.text.toString())) {
-                brand.setError("Please enter your ID number")
+                brand.setError("Please enter Vehicle Brand")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(colorvehicle.text.toString())) {
-                colorvehicle.setError("Please enter your ID number")
+                colorvehicle.setError("Please Vehicle Color")
                 return@setOnClickListener
             }
 

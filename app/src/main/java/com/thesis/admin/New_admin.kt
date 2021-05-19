@@ -8,6 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -31,7 +32,7 @@ class New_admin : AppCompatActivity() {
     }
 
     private fun registeradmin() {
-
+        val assecu = findViewById<TextView>(R.id.assecu)
         val adminID = findViewById<EditText>(R.id.adminID)
         val adminName = findViewById<EditText>(R.id.adminName)
         val adminpass = findViewById<EditText>(R.id.adminpass)
@@ -61,6 +62,7 @@ class New_admin : AppCompatActivity() {
                         if (it.isSuccessful) {
                             val currentUserAdmin = authSecu.currentUser
                             val currentUserSecuDb = databaseReferenceSecu?.child((currentUserAdmin?.uid!!))
+                            currentUserSecuDb?.child("as")?.setValue(assecu.text.toString())
                             currentUserSecuDb?.child("SecuID")?.setValue(adminID.text.toString())
                             currentUserSecuDb?.child("SecuName")?.setValue(adminName.text.toString())
                             currentUserSecuDb?.child("EmailAddress")?.setValue(emailaddress.text.toString())

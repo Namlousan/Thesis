@@ -251,52 +251,56 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="70dp"
         android:orientation="vertical">
 
         <RelativeLayout
-            android:layout_marginTop="69.8dp"
             android:id="@+id/slot13"
-            android:layout_width="40dp"
-            android:layout_height="19dp"
-            android:background="@drawable/rectangle">
+            android:background="@drawable/rectangle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69.8dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/asss"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 13"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot14"
-            android:layout_width="40dp"
-            android:layout_height="19dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 14"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot15"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -305,16 +309,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 15"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot16"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -323,16 +328,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 16"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot17"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -341,16 +347,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 17"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot18"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -359,17 +366,18 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 18"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
-        <RelativeLayout
-            android:layout_marginTop="2dp"
 
+        <RelativeLayout
             android:id="@+id/slot19"
+
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -378,16 +386,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 19"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot20"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -396,16 +405,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 20"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="130dp"
             android:id="@+id/slot21"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="130dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -414,16 +424,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 21"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot22"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -432,16 +443,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 22"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot23"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -450,16 +462,17 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 23"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
+
         <RelativeLayout
-            android:layout_marginTop="2dp"
             android:id="@+id/slot24"
             android:layout_width="40dp"
             android:layout_height="19dp"
+            android:layout_marginTop="2dp"
             android:background="@drawable/rectangle">
 
             <TextView
@@ -468,12 +481,12 @@
                 android:layout_margin="3dp"
                 android:gravity="center"
                 android:text="Slot 24"
+                android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="10sp"
-                android:textAlignment="center"/>
+                android:textSize="10sp" />
 
         </RelativeLayout>
     </LinearLayout>
 
 
-    </LinearLayout>
+</LinearLayout>

@@ -9,7 +9,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+
         android:orientation="vertical">
 
         <TextView
@@ -26,162 +27,172 @@
 
         <GridLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:columnCount="2"
-            android:rowCount="4"
-            android:layout_marginLeft="5dp"
-            android:layout_margin="5dp"
-            android:alignmentMode="alignMargins"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:columnOrderPreserved="false">
+            android:layout_margin="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="150dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="4">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/client"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp"
+                android:layout_margin="5dp"
                 app:cardBackgroundColor="#CC808A9F"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="38dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/client1"
-                        android:layout_marginTop="16dp"/>
+                        android:layout_marginTop="16dp"
+                        android:src="@drawable/client1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="Client"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:layout_marginTop="5dp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/parkinglots"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp"
+                android:layout_margin="5dp"
                 app:cardBackgroundColor="#CC808A9F"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="38dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/parkinglots"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/parkinglots" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="Parking Lot"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
-                        android:layout_marginTop="5dp"/>
+                        android:textSize="15sp" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/Appmoni"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp"
+                android:layout_margin="5dp"
                 app:cardBackgroundColor="#CC808A9F"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="38dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/appmoni"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/appmoni" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="App Monitoring"
                         android:textColor="@color/white"
-                        android:textSize="17sp"
-                        android:layout_marginTop="5dp"/>
+                        android:textSize="17sp" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/security1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp"
+                android:layout_margin="5dp"
                 app:cardBackgroundColor="#CC808A9F"
-                android:layout_margin="5dp">
+                app:cardCornerRadius="38dp"
+                app:cardElevation="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/securiy"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/securiy" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="Security"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:layout_marginTop="5dp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/logout"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp"
+                android:layout_margin="10dp"
                 app:cardBackgroundColor="#00000000"
-                android:layout_margin="10dp">
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@drawable/logout"
-                        android:layout_marginTop="12dp"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/logout" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
                         android:text="Log-out"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:layout_marginTop="5dp"/>
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

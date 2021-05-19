@@ -8,6 +8,7 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -25,8 +26,7 @@ class RegAdmin : AppCompatActivity() {
 
         authAdmin = FirebaseAuth.getInstance()
         databaseAdmin = FirebaseDatabase.getInstance()
-        databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB").child("Users").child("Admin")
-
+        databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB")
         registeradmin()
     }
 
@@ -36,6 +36,7 @@ class RegAdmin : AppCompatActivity() {
         val adminName = findViewById<EditText>(R.id.adminName)
         val adminpass = findViewById<EditText>(R.id.adminpass)
         val emailaddress = findViewById<EditText>(R.id.emailaddress)
+        val asadmin = findViewById<TextView>(R.id.asadmin)
         val regbtn = findViewById<Button>(R.id.regbtn)
         val backbtn = findViewById<Button>(R.id.backbtn)
 
@@ -59,17 +60,27 @@ class RegAdmin : AppCompatActivity() {
             authAdmin.createUserWithEmailAndPassword(emailaddress.text.toString(), adminpass.text.toString())
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-
                         val currentUserAdmin = authAdmin.currentUser
                         val currentUserAdminDB = databaseReferenceAdmin?.child((currentUserAdmin?.uid!!))
-                        currentUserAdminDB?.child("AdminID")?.setValue(adminID.text.toString())
-                        currentUserAdminDB?.child("AdminName")?.setValue(adminName.text.toString())
-                        currentUserAdminDB?.child("EmailAddress")?.setValue(emailaddress.text.toString())
-                        currentUserAdminDB?.child("SecuPass")?.setValue(adminpass.text.toString())
+                        currentUserAdmin.sendEmailVerification().addOnCompleteListener {
+                            if(it.isSuccessful){
+                                currentUserAdminDB?.child("as")?.setValue(asadmin.text.toString())
+                                currentUserAdminDB?.child("AdminID")?.setValue(adminID.text.toString())
+                                currentUserAdminDB?.child("AdminName")?.setValue(adminName.text.toString())
+                                currentUserAdminDB?.child("EmailAddress")?.setValue(emailaddress.text.toString())
+                                currentUserAdminDB?.child("SecuPass")?.setValue(adminpass.text.toString())
 
+                                Toast.makeText(this, "Registration succes! Email verification sent!", Toast.LENGTH_LONG).show()
+                                finish()
+                            }else{
+                                Toast.makeText(
+                                        this,
+                                        "Registration Failed, try agian!",
+                                        Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
 
-                        Toast.makeText(this, "Registration succes!", Toast.LENGTH_LONG).show()
-                        finish()
                     }else {
                         Toast.makeText(
                             this,

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.google.firebase.auth.FirebaseAuth
@@ -22,13 +23,16 @@ class Che_parking : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_che_parking)
+        statusOnClick()
+    }
 
+        fun statusOnClick(){
 
-
-        val slot1 = findViewById<TextView>(R.id.myImageViewText)
-        slot1.setOnClickListener{
-            slot1.text = "Occupied"
-        }
+            val slot1 = findViewById<RelativeLayout>(R.id.slot1)
+            val myImageViewText = findViewById<TextView>(R.id.myImageViewText)
+            slot1.setOnClickListener{
+                myImageViewText.text = "avail"
+            }
 
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -42,3 +46,4 @@ class Che_parking : AppCompatActivity() {
         }
     }
 }
+
