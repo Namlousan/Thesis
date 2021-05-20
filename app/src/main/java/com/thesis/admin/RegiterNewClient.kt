@@ -13,7 +13,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import org.apache.commons.lang3.RandomStringUtils
 
-class RegisterNewClient : AppCompatActivity() {
+class RegiterNewClient : AppCompatActivity() {
 
     lateinit var auth: FirebaseAuth
     var databaseReference : DatabaseReference? = null
@@ -32,7 +32,7 @@ class RegisterNewClient : AppCompatActivity() {
     }
 
     private fun register(){
-
+        val asclient = findViewById<TextView>(R.id.asclient)
         val regButton = findViewById<Button>(R.id.saveclient)
         val backtoclientmenu = findViewById<Button>(R.id.backtoclientmenu)
         val branch = findViewById<EditText>(R.id.branch)
@@ -51,37 +51,37 @@ class RegisterNewClient : AppCompatActivity() {
         regButton.setOnClickListener{
 
             if (TextUtils.isEmpty(branch.text.toString())){
-                branch.setError("Please enter your last name")
+                branch.setError("Please enter branch")
                 return@setOnClickListener
             }else if(TextUtils.isEmpty(empid.text.toString())) {
-                empid.setError("Please enter your last name")
+                empid.setError("Please enter Employee ID")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(deptartment.text.toString())) {
-                deptartment.setError("Please enter your email")
+                deptartment.setError("Please enter College")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(depcode.text.toString())) {
-                depcode.setError("Please enter your ID number")
+                depcode.setError("Please enter departmet code")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(lname.text.toString())) {
-                lname.setError("Please enter your ID number")
+                lname.setError("Please enter client's last name")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(fname.text.toString())) {
-                fname.setError("Please enter your ID number")
+                fname.setError("Please enter client's lirst Name")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(email.text.toString())) {
-                email.setError("Please enter your ID number")
+                email.setError("Please enter valid email")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(pass.text.toString())) {
-                pass.setError("Please enter your ID number")
+                pass.setError("Please enter access code")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(platenum.text.toString())) {
-                platenum.setError("Please enter your ID number")
+                platenum.setError("Please enter PL Number")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(brand.text.toString())) {
-                brand.setError("Please enter your ID number")
+                brand.setError("Please enter Vehicle Brand")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(colorvehicle.text.toString())) {
-                colorvehicle.setError("Please enter your ID number")
+                colorvehicle.setError("Please Vehicle Color")
                 return@setOnClickListener
             }
 
@@ -93,6 +93,7 @@ class RegisterNewClient : AppCompatActivity() {
                     if(it.isSuccessful){
                         val currentUser = auth.currentUser
                         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
+                        currentUserDb?.child("as")?.setValue(asclient.text.toString())
                         currentUserDb?.child("branch")?.setValue(branch.text.toString())
                         currentUserDb?.child("empid")?.setValue(empid.text.toString())
                         currentUserDb?.child("department")?.setValue(deptartment.text.toString())
@@ -105,11 +106,11 @@ class RegisterNewClient : AppCompatActivity() {
                         currentUserDb?.child("vehicleBrand")?.setValue(brand.text.toString())
                         currentUserDb?.child("vehicleColor")?.setValue(colorvehicle.text.toString())
 
-                        Toast.makeText(this@RegisterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@RegiterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
                         finish()
                     } else {
                         Toast.makeText(
-                            this@RegisterNewClient,
+                            this@RegiterNewClient,
                             "Registration Failed, try agian!",
                             Toast.LENGTH_LONG
                         ).show()
@@ -118,7 +119,7 @@ class RegisterNewClient : AppCompatActivity() {
 
         }
         backtoclientmenu.setOnClickListener{
-            startActivity(Intent(this@RegisterNewClient, Home_menu::class.java))
+            startActivity(Intent(this@RegiterNewClient, Home_menu::class.java))
         }
     }
 }
