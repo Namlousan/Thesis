@@ -36,7 +36,7 @@ class Home_menu : AppCompatActivity() {
         }
         val appmoni = findViewById<CardView>(R.id.Appmoni)
         appmoni.setOnClickListener {
-            val intent = Intent(this, Client_history_table::class.java)
+            val intent = Intent(this, Tables_1::class.java)
             startActivity(intent)
         }
 

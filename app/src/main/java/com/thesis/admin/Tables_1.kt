@@ -27,7 +27,7 @@ class Tables_1 : AppCompatActivity() {
         }
         val cardView2 = findViewById<CardView>(R.id.AdminApp)
         cardView2.setOnClickListener {
-            val intent = Intent(this, AdminApphistory::class.java)
+            val intent = Intent(this, Adminapphistory1::class.java)
             startActivity(intent)
         }
         val cardView3 = findViewById<CardView>(R.id.secuApp)

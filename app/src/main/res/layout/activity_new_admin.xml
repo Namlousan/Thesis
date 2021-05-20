@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:background="@color/maroon"
+        android:background="#2B1B3F"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         tools:context=".New_admin"

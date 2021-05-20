@@ -4,39 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Update_client"
+    tools:context=".Adminapphistory1"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@color/white">
+    android:padding="10dp">
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="UPDATE CLIENT INFORMATIONS"
-        android:textColor="@color/black"
-        android:textSize="23sp"
+        android:text="ADMIN APP HISTORY TABLE"
+        android:textSize="25sp"
         android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
+        android:layout_gravity="center_horizontal"
         android:textAlignment="center"/>
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/branch_dropdown"
+   <!-- <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/choose_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
 
         <AutoCompleteTextView
-            android:id="@+id/act_branch"
+            android:id="@+id/act_admin1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:hint="Select Client"
+            android:hint="Choose Admin"
             android:textColor="@color/black"
             android:padding="20dp"
-            android:layout_marginTop="15dp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="15dp"
+            android:completionThreshold="3"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+    <SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        app:queryHint="Search Admin"/>
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -57,56 +68,64 @@
                     android:background="#00AEAE">
 
                     <TextView
-                        android:id="@+id/ID"
                         android:layout_width="10dp"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_weight=".2"
                         android:padding="10sp"
+                        android:text="@string/col1"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
-                        android:text="ID"/>
+                        android:textSize="12sp" />
 
                     <TextView
-                        android:id="@+id/Client_name"
                         android:layout_width="19dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:padding="10sp"
+                        android:text="Client Name"
                         android:textColor="@color/black"
-                        android:textSize="12sp"
-                        android:text="Client Name"/>
-
+                        android:textSize="12sp" />
                     <TextView
                         android:layout_width="10dp"
                         android:layout_height="match_parent"
                         android:layout_weight=".5"
                         android:padding="10sp"
-                        android:text="#"
+                        android:text="LogStat"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:padding="10sp"
+                        android:text="Date"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:padding="10sp"
+                        android:text="Time"
                         android:textColor="@color/black"
                         android:textSize="12sp"/>
                 </TableRow>
             </TableLayout>
+
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/clientlisthistory"
+                android:id="@+id/adminresult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/uci" />
+                tools:listitem="@layout/adminrecyclerview" />
 
 
         </LinearLayout>
 
     </ScrollView>
+
     <Button
-        android:layout_marginTop="40dp"
+        android:id="@+id/backtohome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Client Information"/>
-    <Button
-        android:id="@+id/back_to_client"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Back to Client Menu"/>
-
-
+        android:text="back" />
 
 </LinearLayout>

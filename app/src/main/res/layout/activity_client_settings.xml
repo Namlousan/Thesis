@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="Choose Client"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:padding="20dp"
             android:layout_marginTop="15dp"
             android:completionThreshold="3"/>
@@ -52,11 +52,12 @@
         android:layout_marginTop="10dp">
 
         <RadioButton
-            android:id="@+id/radio1"
+            android:id="@+id/radioadmin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Administrator"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:onClick="onRadioButtonClicked"/>
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="wrap_content"

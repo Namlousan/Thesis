@@ -36,8 +36,8 @@ class New_admin : AppCompatActivity() {
         val adminName = findViewById<EditText>(R.id.adminName)
         val adminpass = findViewById<EditText>(R.id.adminpass)
         val emailaddress = findViewById<EditText>(R.id.emailaddress)
-        val admindept = findViewById<EditText>(R.id.admindept)
-        val admindeptcode = findViewById<EditText>(R.id.admindeptcode)
+        /*val admindept = findViewById<EditText>(R.id.admindept)
+        val admindeptcode = findViewById<EditText>(R.id.admindeptcode)*/
         val regbtn = findViewById<Button>(R.id.regbtn)
         val backbtn = findViewById<Button>(R.id.backbtn)
 
@@ -56,13 +56,13 @@ class New_admin : AppCompatActivity() {
             } else if (TextUtils.isEmpty(adminpass.text.toString())) {
                 adminpass.setError("Please enter Password")
                 return@setOnClickListener
-            } else if (TextUtils.isEmpty(admindept.text.toString())) {
+            } /*else if (TextUtils.isEmpty(admindept.text.toString())) {
                 admindept.setError("Please enter What Department")
                 return@setOnClickListener
             } else if (TextUtils.isEmpty(admindeptcode.text.toString())) {
                 admindeptcode.setError("Please enter DeptCode")
                 return@setOnClickListener
-            }
+            }*/
 
             authAdmin.createUserWithEmailAndPassword(emailaddress.text.toString(), adminpass.text.toString())
                     .addOnCompleteListener {
@@ -73,10 +73,10 @@ class New_admin : AppCompatActivity() {
                             currentUserAdminDB?.child("AdminName")?.setValue(adminName.text.toString())
                             currentUserAdminDB?.child("EmailAddress")?.setValue(emailaddress.text.toString())
                             currentUserAdminDB?.child("AdminPass")?.setValue(adminpass.text.toString())
-                            currentUserAdminDB?.child("AdminDept")?.setValue(admindept.text.toString())
-                            currentUserAdminDB?.child("AdminDeptCode")?.setValue(admindeptcode.text.toString())
+                       //     currentUserAdminDB?.child("AdminDept")?.setValue(admindept.text.toString())
+                         //   currentUserAdminDB?.child("AdminDeptCode")?.setValue(admindeptcode.text.toString())
 
-                            Toast.makeText(this@New_admin, "Registration succes!", Toast.LENGTH_LONG).show()
+                            Toast.makeText(this@New_admin, "Registration success!", Toast.LENGTH_LONG).show()
                             finish()
                         }else {
                             Toast.makeText(

@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +17,7 @@ class Client_history_table : AppCompatActivity() {
     private lateinit var dbref :DatabaseReference
     private lateinit var clienthistory : RecyclerView
     private lateinit var clientArrayList : ArrayList<User>
+    private lateinit var clientsearch: AutoCompleteTextView
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,6 +28,7 @@ class Client_history_table : AppCompatActivity() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         );
         getSupportActionBar()?.hide();
+
 
 
         //buttons
@@ -67,7 +70,6 @@ class Client_history_table : AppCompatActivity() {
 
         })
     }
-
 
 
 }
