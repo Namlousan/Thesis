@@ -8,6 +8,7 @@ import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,6 +20,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,15 +31,18 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.net.HttpCookie;
 import java.util.ArrayList;
 
 public class Client_settings extends AppCompatActivity {
+
     RadioGroup radioGroup;
     RadioButton radioButton;
+    String TAG = null;
 
     private RadioButton radio1, radio2;
 
-    DatabaseReference ref;
+    DatabaseReference ref, fromPath, toPath;
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -48,6 +54,8 @@ public class Client_settings extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+
+
         ref = FirebaseDatabase.getInstance().getReference();
         ArrayAdapter<String> autocomplete = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         ref.child("ClientDb").addValueEventListener(new ValueEventListener() {
@@ -55,8 +63,9 @@ public class Client_settings extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot suggestionSnapshot : dataSnapshot.getChildren()) {
 
-                    String firtname = suggestionSnapshot.child("firtname").getValue(String.class);
-                    autocomplete.add(firtname);
+                    String firstname = suggestionSnapshot.child("firtname").getValue(String.class);
+                    autocomplete.add(firstname);
+
                 }
             }
 
@@ -65,40 +74,76 @@ public class Client_settings extends AppCompatActivity {
 
             }
         });
-        AutoCompleteTextView ACTV = (AutoCompleteTextView) findViewById(R.id.act_client);
+        AutoCompleteTextView ACTV = findViewById(R.id.act_client);
         ACTV.setAdapter(autocomplete);
 
+        copyRecord();
+    }
 
-        //radio groups
+    public void copyRecord(){
 
-        radioGroup = findViewById(R.id.selection);
         Button buttonsave = findViewById(R.id.save);
-
-
-
         buttonsave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                validation();
-            }
-        });
 
+
+                fromPath = FirebaseDatabase.getInstance().getReference().child("ClientDb");
+                toPath = FirebaseDatabase.getInstance().getReference().child("AdminDB");
+
+                fromPath.addValueEventListener(new ValueEventListener() {
+
+                    private void moveRecord(DatabaseReference fromPath, final DatabaseReference toPath) {
+                        ValueEventListener valueEventListener = new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                toPath.setValue(snapshot.getValue()).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isComplete()) {
+                                            Log.d(TAG, "Success!");
+                                        } else {
+                                            Log.d(TAG, "Copy failed!");
+                                        }
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Log.d(TAG, error.getMessage()); //Don't ignore potential errors!
+                            }
+                        };
+                        fromPath.addListenerForSingleValueEvent(valueEventListener);
+                    }
+
+
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+            };
+         });
     }
-    public void validation(){
-        int isSelected = radioGroup.getCheckedRadioButtonId();
-        if (isSelected==1) {
-            Toast.makeText(Client_settings.this, "You have not selected anything", Toast.LENGTH_LONG).show();
+
+    public void checkButton(View v){
+        radioGroup = findViewById(R.id.selection);
+        radio1 = findViewById(R.id.radioadmin);
+        radio2 = findViewById(R.id.radio2);
+
+        int radio = radioGroup.getCheckedRadioButtonId();
+        radioButton = findViewById(radio);
+
+        Toast.makeText(this, radioButton.getText() + "selected", Toast.LENGTH_SHORT).show();
+
         }
-
-
-            radio1 = findViewById(R.id.radioadmin);
-           radio1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-               @Override
-               public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
-               }
-           });
-        }}
+}
 
 
 

@@ -5,43 +5,36 @@
 
     <TextView
         android:id="@+id/ID"
-        android:layout_width="10dp"
+        android:layout_width="5dp"
         android:layout_height="match_parent"
-        android:layout_weight=".2"
+        android:layout_weight=".5"
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/Adminname"
-        android:layout_width="19dp"
+        android:layout_width="15dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_weight=".7"
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="12sp" />
     <TextView
         android:id="@+id/LogStat"
-        android:layout_width="10dp"
+        android:layout_width="20dp"
         android:layout_height="match_parent"
-        android:layout_weight=".5"
+        android:layout_weight="1"
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="12sp"/>
     <TextView
         android:id="@+id/Date"
-        android:layout_width="10dp"
+        android:layout_width="5dp"
         android:layout_height="match_parent"
         android:layout_weight=".5"
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="12sp"/>
-    <TextView
-        android:id="@+id/Time"
-        android:layout_width="10dp"
-        android:layout_height="match_parent"
-        android:layout_weight=".5"
-        android:padding="10sp"
-        android:textColor="@color/black"
-        android:textSize="12sp"/>
+
 </TableRow>

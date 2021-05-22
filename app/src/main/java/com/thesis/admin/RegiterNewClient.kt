@@ -39,7 +39,6 @@ class RegiterNewClient : AppCompatActivity() {
         val empid = findViewById<EditText>(R.id.empid)
         val deptartment = findViewById<EditText>(R.id.deptartment)
         val depcode = findViewById<EditText>(R.id.depcode)
-        val lname = findViewById<EditText>(R.id.lname)
         val fname = findViewById<EditText>(R.id.fname)
         val email = findViewById<EditText>(R.id.email)
         val pass = findViewById<EditText>(R.id.pass)
@@ -61,9 +60,6 @@ class RegiterNewClient : AppCompatActivity() {
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(depcode.text.toString())) {
                 depcode.setError("Please enter departmet code")
-                return@setOnClickListener
-            }else if (TextUtils.isEmpty(lname.text.toString())) {
-                lname.setError("Please enter client's last name")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(fname.text.toString())) {
                 fname.setError("Please enter client's lirst Name")
@@ -90,25 +86,34 @@ class RegiterNewClient : AppCompatActivity() {
 
             auth.createUserWithEmailAndPassword(email.text.toString(),pass.text.toString() )
                 .addOnCompleteListener{
-                    if(it.isSuccessful){
+                    if(it.isSuccessful) {
                         val currentUser = auth.currentUser
                         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
-                        currentUserDb?.child("as")?.setValue(asclient.text.toString())
-                        currentUserDb?.child("branch")?.setValue(branch.text.toString())
-                        currentUserDb?.child("empid")?.setValue(empid.text.toString())
-                        currentUserDb?.child("department")?.setValue(deptartment.text.toString())
-                        currentUserDb?.child("deptcode")?.setValue(depcode.text.toString())
-                        currentUserDb?.child("lastname")?.setValue(lname.text.toString())
-                        currentUserDb?.child("firtname")?.setValue(fname.text.toString())
-                        currentUserDb?.child("email")?.setValue(email.text.toString())
-                        currentUserDb?.child("password")?.setValue(pass.text.toString())
-                        currentUserDb?.child("plateNumber")?.setValue(platenum.text.toString())
-                        currentUserDb?.child("vehicleBrand")?.setValue(brand.text.toString())
-                        currentUserDb?.child("vehicleColor")?.setValue(colorvehicle.text.toString())
+                        currentUser.sendEmailVerification().addOnCompleteListener {
+                            if (it.isSuccessful) {
+                                currentUserDb?.child("as")?.setValue(asclient.text.toString())
+                                currentUserDb?.child("branch")?.setValue(branch.text.toString())
+                                currentUserDb?.child("empid")?.setValue(empid.text.toString())
+                                currentUserDb?.child("department")?.setValue(deptartment.text.toString())
+                                currentUserDb?.child("deptcode")?.setValue(depcode.text.toString())
+                                currentUserDb?.child("fullname")?.setValue(fname.text.toString())
+                                currentUserDb?.child("email")?.setValue(email.text.toString())
+                                currentUserDb?.child("password")?.setValue(pass.text.toString())
+                                currentUserDb?.child("plateNumber")?.setValue(platenum.text.toString())
+                                currentUserDb?.child("vehicleBrand")?.setValue(brand.text.toString())
+                                currentUserDb?.child("vehicleColor")?.setValue(colorvehicle.text.toString())
 
-                        Toast.makeText(this@RegiterNewClient, "Registration succes!", Toast.LENGTH_LONG).show()
-                        finish()
-                    } else {
+                                Toast.makeText(this@RegiterNewClient, "Registration succes! Email verification snet!", Toast.LENGTH_LONG).show()
+                                finish()
+                            } else {
+                                Toast.makeText(
+                                        this@RegiterNewClient,
+                                        "Registration Failed, try agian!",
+                                        Toast.LENGTH_LONG
+                                ).show()
+                            }
+                        }
+                    }else {
                         Toast.makeText(
                             this@RegiterNewClient,
                             "Registration Failed, try agian!",

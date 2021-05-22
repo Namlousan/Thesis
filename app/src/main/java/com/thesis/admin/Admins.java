@@ -3,8 +3,6 @@ package com.thesis.admin;
 public class Admins {
     private String AdminID;
 
-    public Admins() {
-    }
 
     public Admins(String adminID, String adminName) {
         AdminID = adminID;

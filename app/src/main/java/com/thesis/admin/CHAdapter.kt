@@ -13,6 +13,7 @@ class CHAdapter(private val clientList:ArrayList<User>) : RecyclerView.Adapter<C
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.client_item,parent,false)
 
+
         return MyViewHolder(itemView)
     }
 

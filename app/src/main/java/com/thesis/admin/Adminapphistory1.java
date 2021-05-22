@@ -3,25 +3,18 @@ package com.thesis.admin;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.TargetApi;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.SearchView;
-import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,7 +27,7 @@ import java.util.ArrayList;
 
 public class Adminapphistory1 extends AppCompatActivity {
     DatabaseReference ref;
-    ArrayList<Admins>list;
+    ArrayList<Adminis>list;
      RecyclerView result;
     SearchView searchView;
     private AutoCompleteTextView search_admin;
@@ -85,7 +78,7 @@ public class Adminapphistory1 extends AppCompatActivity {
                         list = new ArrayList<>();
                         for(DataSnapshot ds: snapshot.getChildren())
                         {
-                        list.add(ds.getValue(Admins.class));
+                        list.add(ds.getValue(Adminis.class));
                         }
                     adminadapter adminadapter = new adminadapter(list);
                         result.setAdapter(adminadapter);
@@ -118,8 +111,8 @@ public class Adminapphistory1 extends AppCompatActivity {
 
                 }
             private void search(String str) {
-                ArrayList<Admins> myList =  new ArrayList<>();
-                for (Admins object :list){
+                ArrayList<Adminis> myList =  new ArrayList<>();
+                for (Adminis object :list){
                     if (object.getAdminName().toLowerCase().contains(str.toLowerCase()))
                     {
                         myList.add(object);

@@ -18,6 +18,7 @@
         android:fontFamily="@font/prompt_extrabold"
         android:textAlignment="center"/>
 
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/choose_client"
         android:layout_width="match_parent"
@@ -57,13 +58,16 @@
             android:layout_height="wrap_content"
             android:text="Administrator"
             android:textColor="@color/white"
-            android:onClick="onRadioButtonClicked"/>
+            android:onClick="checkButton"
+            android:checked="true"/>
+
         <RadioButton
             android:id="@+id/radio2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Client Only"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:onClick="checkButton"/>
 
     </RadioGroup>
 

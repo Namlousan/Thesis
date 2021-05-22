@@ -18,6 +18,7 @@ class Client_history_table : AppCompatActivity() {
     private lateinit var clienthistory : RecyclerView
     private lateinit var clientArrayList : ArrayList<User>
     private lateinit var clientsearch: AutoCompleteTextView
+
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     override fun onCreate(savedInstanceState: Bundle?) {
