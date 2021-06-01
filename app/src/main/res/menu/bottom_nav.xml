@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/client_fragmet"
+        android:title="Client"
+        android:icon="@drawable/icons8_male_user_50"/>
+    <item
+        android:id="@+id/parking_fragment"
+        android:title="Parking"
+        android:icon="@drawable/ic_baseline_local_parking_24"/>
+    <item
+        android:id="@+id/appmoni_fragment"
+        android:title="Appmoni"
+        android:icon="@drawable/systemmonitor"/>
+    <item
+        android:id="@+id/security_fragment"
+        android:title="Security"
+        android:icon="@drawable/ic_baseline_security_24"/>
+    <item
+        android:id="@+id/account_fragment"
+        android:title="Other"
+        android:icon="@drawable/icons8_male_user_50"/>
+
+</menu>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".security_fragment"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="SECURITY MENU"
+         android:textColor="@color/black"
+         android:fontFamily="@font/open_sans_extrabold"
+         android:textSize="40sp"
+         android:textAlignment="center"
+         android:layout_marginTop="20dp"/>
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/cardview_bg">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register Admin"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="40dp"/>
+
+                <Button
+                    android:id="@+id/addnewuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    android:padding="20dp" />
+                <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/_useradd"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/cardview_bg">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrators"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="37dp"
+                    android:layout_marginTop="40dp"/>
+
+                <Button
+                    android:id="@+id/updateclient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    android:padding="20dp" />
+                <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/_useradd"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/cardview_bg">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Admin logs"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="89dp"
+                    android:layout_marginTop="40dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    android:padding="20dp" />
+                <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/_useradd"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/cardview_bg">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manuals"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/open_sans_extrabold"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="120dp"
+                    android:layout_marginTop="40dp"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/transparent"
+                    android:padding="20dp" />
+                <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:src="@drawable/_useradd"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+            </RelativeLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/cardview_bg">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Help"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="173dp"
+                        android:layout_marginTop="40dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent"
+                        android:padding="20dp" />
+                    <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/_useradd"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

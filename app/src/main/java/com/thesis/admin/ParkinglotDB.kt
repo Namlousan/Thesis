@@ -12,7 +12,7 @@ class ParkinglotDB : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.back)
         button.setOnClickListener{
-            val intent = Intent(this, ParkingLOGS::class.java)
+            val intent = Intent(this, parking_fragment::class.java)
             startActivity(intent)
         }
     }

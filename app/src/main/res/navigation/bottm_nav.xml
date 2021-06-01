@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottm_nav"
+    app:startDestination="@id/client_fragmet">
+
+    <fragment
+        android:id="@+id/client_fragmet"
+        android:name="com.thesis.admin.client_fragmet"
+        android:label="fragment_client_fragmet"
+        tools:layout="@layout/fragment_client_fragmet" />
+    <fragment
+        android:id="@+id/parking_fragment"
+        android:name="com.thesis.admin.parking_fragment"
+        android:label="fragment_parking_fragment"
+        tools:layout="@layout/fragment_parking_fragment" />
+    <fragment
+        android:id="@+id/appmoni_fragment"
+        android:name="com.thesis.admin.appmoni_fragment"
+        android:label="fragment_appmoni_fragment"
+        tools:layout="@layout/fragment_appmoni_fragment" />
+    <fragment
+        android:id="@+id/security_fragment"
+        android:name="com.thesis.admin.security_fragment"
+        android:label="fragment_security_fragment"
+        tools:layout="@layout/fragment_security_fragment" />
+    <fragment
+        android:id="@+id/account_fragment"
+        android:name="com.thesis.admin.account_fragment"
+        android:label="fragment_account_fragment"
+        tools:layout="@layout/fragment_account_fragment" />
+</navigation>

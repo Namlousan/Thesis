@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADMIN"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Adminapphistory1"></activity>
+        <activity android:name=".NewClientUI"></activity>
+        <activity android:name=".home_bottmnav" />
+        <activity android:name=".ParkinglotDB" />
+        <activity android:name=".Adminapphistory1" />
         <activity android:name=".AdminApphistory1" />
         <activity android:name=".Security_registration" />
         <activity android:name=".Che_parking" />

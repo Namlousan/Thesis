@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".appmoni_fragment"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="APP MONITORING"
+            android:textColor="@color/black"
+            android:fontFamily="@font/open_sans_extrabold"
+            android:textSize="40sp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"/>
+
+        <ScrollView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/cardview_bg">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Client App"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="120dp"
+                        android:layout_marginTop="40dp"/>
+
+                    <Button
+                        android:id="@+id/clientapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent"
+                        android:padding="20dp" />
+                    <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_width="63dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/_useradd"
+                        android:layout_marginLeft="@dimen/_14sdp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/cardview_bg">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="105dp"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:text="Admin App"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
+
+                    <Button
+                        android:id="@+id/adminapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent"
+                        android:padding="20dp" />
+                    <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:src="@drawable/client_png"
+                        android:layout_marginLeft="@dimen/_10sdp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/cardview_bg">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Security App"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:fontFamily="@font/open_sans_extrabold"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="40dp"/>
+
+                    <Button
+                        android:id="@+id/secuapp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/transparent"
+                        android:padding="20dp" />
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="68dp"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/logs" />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

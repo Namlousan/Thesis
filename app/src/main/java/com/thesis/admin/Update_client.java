@@ -46,4 +46,4 @@ public class Update_client extends AppCompatActivity {
         act_branch.setThreshold(1);
         Button btn = (Button)findViewById(R.id.back_to_client);
 
-        btn.setOnClickListener(v -> startActivity(new Intent(Update_client.this, Client.class)));}}
+        btn.setOnClickListener(v -> startActivity(new Intent(Update_client.this, Home_menu.class)));}}

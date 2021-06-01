@@ -43,7 +43,6 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/maroon"
         android:layout_marginTop="20dp">
 
         <TableRow
@@ -75,176 +74,11 @@
                 android:textSize="12sp"/>
         </TableRow>
 
-        <TableRow>
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="@string/row1"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight=".5"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight="4"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:padding="10sp"
-                android:text="#"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal"/>
-
-
-
-
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="@string/row1"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight=".5"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight="4"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:padding="10sp"
-                android:text="#"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal"/>
-
-
-
-
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="@string/row1"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight=".5"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight="4"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:padding="10sp"
-                android:text="#"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal"/>
-
-
-
-
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="@string/row1"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight=".5"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight="4"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:padding="10sp"
-                android:text="#"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal"/>
-
-
-
-
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="wrap_content"
-                android:text="@string/row1"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight=".5"
-                android:layout_gravity="center_horizontal"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/col2"
-                android:textColor="@color/white"
-                android:padding="10sp"
-                android:textSize="12sp"
-                android:layout_weight="4"
-                android:layout_gravity="center_horizontal"/>
-
-            <TextView
-                android:layout_width="10dp"
-                android:layout_height="match_parent"
-                android:layout_weight=".5"
-                android:padding="10sp"
-                android:text="#"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                android:layout_gravity="center_horizontal"/>
-
-
-
-
-        </TableRow>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/clientlisthistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/uci" />
     </TableLayout>
    </ScrollView>
     <Button

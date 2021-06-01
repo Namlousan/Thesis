@@ -1,204 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_menu"
-    android:background="@drawable/background">
+    android:background="@color/white"
+    tools:openDrawer="start"
+    android:id="@+id/drawerlayout">
 
-    <LinearLayout
+   <include
+        layout="@layout/content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"/>
 
-        android:orientation="vertical">
+    <include
+        android:layout_alignParentBottom="true"
+        layout = "@layout/bottmnav"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:fontFamily="@font/prompt_extrabold"
-            android:text="HOME MENU"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="30sp" />
-
-
-        <GridLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="150dp"
-            android:alignmentMode="alignMargins"
-            android:columnCount="2"
-            android:columnOrderPreserved="false"
-            android:rowCount="4">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/client"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#CC808A9F"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="16dp"
-                        android:src="@drawable/client1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Client"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/parkinglots"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#CC808A9F"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="12dp"
-                        android:src="@drawable/parkinglots" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Parking Lot"
-                        android:textColor="@color/white"
-                        android:textSize="15sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/Appmoni"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#CC808A9F"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="12dp"
-                        android:src="@drawable/appmoni" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="App Monitoring"
-                        android:textColor="@color/white"
-                        android:textSize="17sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/security1"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="#CC808A9F"
-                app:cardCornerRadius="38dp"
-                app:cardElevation="5dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginTop="12dp"
-                        android:src="@drawable/securiy" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Security"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/logout"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_margin="10dp"
-                app:cardBackgroundColor="#00000000"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="0dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginTop="12dp"
-                        android:src="@drawable/logout" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Log-out"
-                        android:textColor="@color/white"
-                        android:textSize="20sp" />
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-
-
-        </GridLayout>
-    </LinearLayout>
-
-</ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

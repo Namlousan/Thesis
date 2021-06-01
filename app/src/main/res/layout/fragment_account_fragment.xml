@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account_fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+
+        <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/qeqeqe"/>
+
+        <TextView
+            android:id="@+id/adminname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="ADMIN NAME"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="115dp"/>
+
+        <TextView
+            android:id="@+id/admin_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="111dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="admin@gmail.com" />
+    </RelativeLayout>
+
+</FrameLayout>
