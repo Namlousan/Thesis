@@ -50,6 +50,7 @@ class Save_client : AppCompatActivity() {
                 ivQRCode.setImageBitmap(bmp)
 
         }catch (e: WriterException){}
+
         val button = findViewById<Button>(R.id.QRback)
         button.setOnClickListener{
             val intent = Intent(this, Client::class.java)

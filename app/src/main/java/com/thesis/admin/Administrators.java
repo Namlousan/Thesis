@@ -13,15 +13,15 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.thesis.admin.data.Clients;
 
-public class Adminapphistory1 extends AppCompatActivity {
+public class Administrators extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    admintablelogsadapter adminadapter;
+    adminadapter adminadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminapphistory1);
+        setContentView(R.layout.activity_administrators);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -29,12 +29,12 @@ public class Adminapphistory1 extends AppCompatActivity {
         recyclerView = findViewById(R.id.clientlisthistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs"), admintablelogs.class)
+        FirebaseRecyclerOptions<Adminis> options =
+                new FirebaseRecyclerOptions.Builder<Adminis>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminDB"), Adminis.class)
                         .build();
 
-        adminadapter = new admintablelogsadapter(options);
+        adminadapter = new adminadapter(options);
         recyclerView.setAdapter(adminadapter);
     }
     @Override
@@ -60,14 +60,12 @@ public class Adminapphistory1 extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textsearch(query);
-                assearch(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String query) {
                 textsearch(query);
-                assearch(query);
                 return false;
             }
         });
@@ -75,23 +73,12 @@ public class Adminapphistory1 extends AppCompatActivity {
     }
 
     private void textsearch(String str) {
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs").orderByChild("ID").startAt(str).endAt(str+"~"), admintablelogs.class)
+        FirebaseRecyclerOptions<Adminis> options =
+                new FirebaseRecyclerOptions.Builder<Adminis>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminDB").orderByChild("AdminName").startAt(str).endAt(str+"~"), Adminis.class)
                         .build();
 
-        adminadapter = new admintablelogsadapter(options);
-        adminadapter.startListening();
-        recyclerView.setAdapter(adminadapter);
-    }
-
-    private void assearch(String str) {
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs").orderByChild("As").startAt(str).endAt(str+"~"), admintablelogs.class)
-                        .build();
-
-        adminadapter = new admintablelogsadapter(options);
+        adminadapter = new adminadapter(options);
         adminadapter.startListening();
         recyclerView.setAdapter(adminadapter);
     }

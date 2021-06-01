@@ -62,7 +62,7 @@ class RegiterNewClient : AppCompatActivity() {
                 depcode.setError("Please enter departmet code")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(fname.text.toString())) {
-                fname.setError("Please enter client's lirst Name")
+                fname.setError("Please enter client's fullame")
                 return@setOnClickListener
             }else if (TextUtils.isEmpty(email.text.toString())) {
                 email.setError("Please enter valid email")

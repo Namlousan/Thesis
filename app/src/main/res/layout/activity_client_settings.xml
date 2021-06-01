@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Client_settings"
     android:orientation="vertical"
-    android:padding="20dp"
-    android:background="@drawable/background">
+    android:padding="20dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CLIENT SETTINGS"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:fontFamily="@font/prompt_extrabold"
         android:textAlignment="center"/>
@@ -38,38 +37,74 @@
             android:completionThreshold="3"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_marginTop="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Make"
-        android:textColor="@color/white"/>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
 
-    <RadioGroup
-        android:id="@+id/selection"
-        android:layout_marginLeft="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/maroon"
+                android:layout_marginTop="20dp">
 
-        <RadioButton
-            android:id="@+id/radioadmin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Administrator"
-            android:textColor="@color/white"
-            android:onClick="checkButton"
-            android:checked="true"/>
+                <TableRow
+                    android:background="#00AEAE">
 
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Client Only"
-            android:textColor="@color/white"
-            android:onClick="checkButton"/>
+                    <TextView
+                        android:layout_width="19dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:padding="10sp"
+                        android:text="@string/col1"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
 
-    </RadioGroup>
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:padding="10sp"
+                        android:text="    Client Name"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="10sp"
+                        android:text="Email"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:padding="10sp"
+                        android:text="As"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"/>
+
+                </TableRow>
+            </TableLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/clientlisthistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/client_item" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
     <LinearLayout
         android:layout_marginTop="100dp"

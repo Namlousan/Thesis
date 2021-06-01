@@ -62,9 +62,9 @@ class New_admin : AppCompatActivity() {
                         if (it.isSuccessful) {
                             val currentUserAdmin = authSecu.currentUser
                             val currentUserSecuDb = databaseReferenceSecu?.child((currentUserAdmin?.uid!!))
-                            currentUserSecuDb?.child("as")?.setValue(assecu.text.toString())
-                            currentUserSecuDb?.child("SecuID")?.setValue(adminID.text.toString())
-                            currentUserSecuDb?.child("SecuName")?.setValue(adminName.text.toString())
+                            currentUserSecuDb?.child("As")?.setValue(assecu.text.toString())
+                            currentUserSecuDb?.child("AdminID")?.setValue(adminID.text.toString())
+                            currentUserSecuDb?.child("AdminName")?.setValue(adminName.text.toString())
                             currentUserSecuDb?.child("EmailAddress")?.setValue(emailaddress.text.toString())
                             currentUserSecuDb?.child("SecuPass")?.setValue(adminpass.text.toString())
 

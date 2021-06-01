@@ -13,40 +13,39 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
 import com.thesis.admin.data.Clients;
 
-public class Adminapphistory1 extends AppCompatActivity {
+public class Update extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    admintablelogsadapter adminadapter;
+    Clientupdateadapter clientupdateadapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_adminapphistory1);
+        setContentView(R.layout.activity_update);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
 
 
         recyclerView = findViewById(R.id.clientlisthistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs"), admintablelogs.class)
+        FirebaseRecyclerOptions<Clients> options =
+                new FirebaseRecyclerOptions.Builder<Clients>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference("ClientDb"), Clients.class)
                         .build();
 
-        adminadapter = new admintablelogsadapter(options);
-        recyclerView.setAdapter(adminadapter);
+        clientupdateadapter = new Clientupdateadapter(options);
+        recyclerView.setAdapter(clientupdateadapter);
     }
     @Override
     protected void onStart() {
         super.onStart();
-        adminadapter.startListening();
+        clientupdateadapter.startListening();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        adminadapter.stopListening();
+        clientupdateadapter.stopListening();
     }
 
     @Override
@@ -60,14 +59,12 @@ public class Adminapphistory1 extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textsearch(query);
-                assearch(query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String query) {
                 textsearch(query);
-                assearch(query);
                 return false;
             }
         });
@@ -75,24 +72,13 @@ public class Adminapphistory1 extends AppCompatActivity {
     }
 
     private void textsearch(String str) {
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs").orderByChild("ID").startAt(str).endAt(str+"~"), admintablelogs.class)
+        FirebaseRecyclerOptions<Clients> options =
+                new FirebaseRecyclerOptions.Builder<Clients>()
+                        .setQuery(FirebaseDatabase.getInstance().getReference("ClientDb").orderByChild("firtname").startAt(str).endAt(str+"~"), Clients.class)
                         .build();
 
-        adminadapter = new admintablelogsadapter(options);
-        adminadapter.startListening();
-        recyclerView.setAdapter(adminadapter);
-    }
-
-    private void assearch(String str) {
-        FirebaseRecyclerOptions<admintablelogs> options =
-                new FirebaseRecyclerOptions.Builder<admintablelogs>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("AdminLogs").orderByChild("As").startAt(str).endAt(str+"~"), admintablelogs.class)
-                        .build();
-
-        adminadapter = new admintablelogsadapter(options);
-        adminadapter.startListening();
-        recyclerView.setAdapter(adminadapter);
+        clientupdateadapter = new Clientupdateadapter(options);
+        clientupdateadapter.startListening();
+        recyclerView.setAdapter(clientupdateadapter);
     }
 }

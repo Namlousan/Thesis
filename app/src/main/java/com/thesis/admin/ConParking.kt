@@ -28,11 +28,10 @@ class ConParking : AppCompatActivity() {
         databaseReference = database?.reference!!.child("zParkingDb").child("CoN Area").child("Slot1")
         databaseReference?.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                val stat = snapshot.child("status").value.toString()
 
+                val stat = snapshot.child("status").value.toString()
                 val rootRef = FirebaseDatabase.getInstance().reference
                 val slot13 = findViewById<RelativeLayout>(R.id.slot13)
-                val asss = findViewById<TextView>(R.id.asss)
 
                 slot13.setOnClickListener(object : View.OnClickListener {
                     override fun onClick(view: View?) {
@@ -76,5 +75,7 @@ class ConParking : AppCompatActivity() {
         })
     }
 }
+
+
 
 

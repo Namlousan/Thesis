@@ -1,18 +1,15 @@
 package com.thesis.admin
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.Window
-import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+
 
 class RegAdmin : AppCompatActivity() {
 
@@ -20,13 +17,30 @@ class RegAdmin : AppCompatActivity() {
     var databaseReferenceAdmin : DatabaseReference? = null
     var databaseAdmin: FirebaseDatabase? = null
 
+    var radioGroup: RadioGroup? = null
+    var radioButton: RadioButton? = null
+    var textView: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reg_admin)
 
+
+        radioGroup = findViewById(R.id.radioGroup)
+        textView = findViewById(R.id.asadmin)
+
+        val buttonApply: Button = findViewById(R.id.button_apply)
+        buttonApply.setOnClickListener {
+            val radioId = radioGroup?.getCheckedRadioButtonId()
+            radioButton = findViewById(radioId!!)
+            textView?.setText("Position: " + radioButton?.getText())
+        }
+
         authAdmin = FirebaseAuth.getInstance()
         databaseAdmin = FirebaseDatabase.getInstance()
         databaseReferenceAdmin = databaseAdmin?.reference!!.child("AdminDB")
+
+
         registeradmin()
     }
 
@@ -55,6 +69,9 @@ class RegAdmin : AppCompatActivity() {
             } else if (TextUtils.isEmpty(adminpass.text.toString())) {
                 adminpass.setError("Please enter Password")
                 return@setOnClickListener
+            }else if (TextUtils.isEmpty(asadmin.text.toString())) {
+                asadmin.setError("Please confirm position")
+                return@setOnClickListener
             }
 
             authAdmin.createUserWithEmailAndPassword(emailaddress.text.toString(), adminpass.text.toString())
@@ -64,7 +81,7 @@ class RegAdmin : AppCompatActivity() {
                         val currentUserAdminDB = databaseReferenceAdmin?.child((currentUserAdmin?.uid!!))
                         currentUserAdmin.sendEmailVerification().addOnCompleteListener {
                             if(it.isSuccessful){
-                                currentUserAdminDB?.child("as")?.setValue(asadmin.text.toString())
+                                currentUserAdminDB?.child("As")?.setValue(asadmin.text.toString())
                                 currentUserAdminDB?.child("AdminID")?.setValue(adminID.text.toString())
                                 currentUserAdminDB?.child("AdminName")?.setValue(adminName.text.toString())
                                 currentUserAdminDB?.child("EmailAddress")?.setValue(emailaddress.text.toString())
@@ -83,9 +100,9 @@ class RegAdmin : AppCompatActivity() {
 
                     }else {
                         Toast.makeText(
-                            this,
-                            "Registration Failed, try agian!",
-                            Toast.LENGTH_LONG
+                                this,
+                                "Registration Failed, try agian!",
+                                Toast.LENGTH_LONG
                         ).show()
                     }
                 }
@@ -93,5 +110,12 @@ class RegAdmin : AppCompatActivity() {
         backbtn.setOnClickListener{
             startActivity(Intent(this, Administrators::class.java))
         }
+    }
+
+    fun checkButton(v: View?) {
+        val radioId: Int = radioGroup!!.getCheckedRadioButtonId()
+        radioButton = findViewById<RadioButton>(radioId)
+        Toast.makeText(this, "Selected Radio Button: " + radioButton?.getText(),
+                Toast.LENGTH_SHORT).show()
     }
 }

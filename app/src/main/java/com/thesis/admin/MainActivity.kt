@@ -16,6 +16,8 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.text.SimpleDateFormat
+import java.util.*
 
     class MainActivity : AppCompatActivity() {
 
@@ -28,13 +30,10 @@ import com.google.firebase.database.*
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        getSupportActionBar()?.hide();
 
         authAdmin = FirebaseAuth.getInstance()
         val currentUser = authAdmin.currentUser
-        if(currentUser != null){
-            startActivity(Intent(this@MainActivity, Home_menu::class.java))
-            finish()
-        }
 
         login()
     }
@@ -73,15 +72,33 @@ import com.google.firebase.database.*
                                     if(currentUserAdmin.isEmailVerified){
                                         databaseReferenceAdmin?.addValueEventListener(object : ValueEventListener {
                                             override fun onDataChange(snapshot: DataSnapshot) {
-                                                val AdminDB = snapshot.child("as").value.toString()
+                                                val AdminDB = snapshot.child("As").value.toString()
                                                 if (AdminDB.equals("Admin")) {
+
+                                                    val df = SimpleDateFormat("EEE MM/dd/yyyy hh:mm.ss aa")
+                                                    val c = Calendar.getInstance()
+                                                    val str_time: String = df.format(c.time)
+                                                    val name = snapshot.child("AdminName").value.toString()
+                                                    val id = snapshot.child("AdminID").value.toString()
+                                                    val As = snapshot.child("As").value.toString()
+
+                                                    val database = FirebaseDatabase.getInstance()
+                                                    val myRef = database.getReference("AdminLogs")
+                                                    val map: HashMap<String, String?> = hashMapOf(
+                                                            "Name" to name,
+                                                            "Date" to str_time,
+                                                            "As" to As,
+                                                            "ID" to id,
+                                                            "LogStat" to "LogIn"
+                                                    )
+                                                    myRef.push().setValue(map)
+
                                                     startActivity(Intent(this@MainActivity, Home_menu::class.java))
 
                                                 }else {
                                                     Toast.makeText(this@MainActivity, "Login failed", Toast.LENGTH_LONG)
                                                             .show()
                                                 }
-
                                             }
 
                                             override fun onCancelled(error: DatabaseError) {

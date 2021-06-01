@@ -28,7 +28,7 @@ class Client : AppCompatActivity() {
 
             val cardView2 = findViewById<CardView>(R.id.update_client)
             cardView2.setOnClickListener {
-                val intent = Intent(this, Update_client::class.java)
+                val intent = Intent(this, Update::class.java)
                 startActivity(intent)
             }
 

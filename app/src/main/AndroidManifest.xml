@@ -12,11 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ADMIN"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Adminapphistory1"></activity>
+        <activity android:name=".Adminapphistory1" />
         <activity android:name=".RegAdmin" />
         <activity android:name=".Security_registration" />
         <activity android:name=".Che_parking" />
         <activity android:name=".OOP" />
+        <activity android:name=".Update"
+            android:parentActivityName=".Client"
+            android:label="Client List"/>
         <activity android:name=".captcha" />
         <activity android:name=".Heroes_park" />
         <activity android:name=".RegiterNewClient" />
@@ -31,15 +34,16 @@
         <activity android:name=".Logs" />
         <activity android:name=".Clientmanual" />
         <activity android:name=".New_admin" />
-        <activity android:name=".Administrators" />
+        <activity android:name=".Administrators"
+            android:parentActivityName=".Security"
+            android:label="Admin List"/>
         <activity android:name=".Security" />
         <activity android:name=".Client_settings" />
         <activity android:name=".Update_client" />
-        <activity
-            android:name=".ui.login.Update_Client"
-            android:label="@string/title_activity_update__client" />
         <activity android:name=".Save_client" />
-        <activity android:name=".NewClient" />
+        <activity android:name=".NewClient"
+            android:parentActivityName=".Client"
+            android:label="Register"/>
         <activity android:name=".Client" />
         <activity android:name=".Home_menu" />
         <activity android:name=".MainActivity">

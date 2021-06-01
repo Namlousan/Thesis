@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/adminname"
+            android:id="@+id/nametext"
             android:text="Name"
             android:textStyle="bold"
             android:textSize="15sp"
@@ -27,7 +27,7 @@
             android:id="@+id/texttt"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/adminname"
+            android:layout_below="@id/nametext"
             android:layout_marginLeft="10dp"
             android:text="I.D:"
             android:textColor="@color/black"
@@ -36,13 +36,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/id"
+            android:id="@+id/empidtext"
             android:text="I.D"
             android:textSize="17sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@id/texttt"
-            android:layout_below="@id/adminname"
-            />
+            android:layout_below="@id/nametext"
+       />
 
         <TextView
             android:layout_width="80dp"
@@ -51,45 +51,45 @@
             android:text="Email Ad:"
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:layout_below="@id/id"
+            android:layout_below="@id/empidtext"
             android:layout_marginLeft="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/emailad"
+            android:id="@+id/emailtext"
             android:text="Email"
             android:textSize="15sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@id/textt"
-            android:layout_below="@id/id"
-            />
+            android:layout_below="@id/empidtext"
+          />
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:id="@+id/text"
-            android:text="Position: "
+            android:text="Plate No.: "
             android:textSize="15sp"
             android:textColor="@color/black"
-            android:layout_below="@id/emailad"
+            android:layout_below="@id/emailtext"
             android:layout_marginLeft="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/code"
+            android:id="@+id/pltext"
             android:text="Platenumber"
             android:textSize="15sp"
             android:textColor="@color/black"
             android:layout_toRightOf="@id/text"
-            android:layout_below="@id/emailad"
-            />
+            android:layout_below="@id/emailtext"
+          />
 
         <LinearLayout
             android:id="@+id/edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/code"
+            android:layout_below="@+id/pltext"
             android:layout_marginLeft="85dp"
             android:orientation="horizontal">
 
