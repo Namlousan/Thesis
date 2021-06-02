@@ -41,7 +41,7 @@ class Che_parking : AppCompatActivity() {
 
         val button = findViewById<Button>(R.id.backimg)
         button.setOnClickListener{
-            val intent = Intent(this, ParkingLots::class.java)
+            val intent = Intent(this, parking_fragment::class.java)
             startActivity(intent)
         }
     }

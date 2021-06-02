@@ -50,7 +50,7 @@ class ConParking : AppCompatActivity() {
 
                 val button = findViewById<Button>(R.id.backimg)
                 button.setOnClickListener {
-                    startActivity(Intent(this@ConParking, Security::class.java))
+                    startActivity(Intent(this@ConParking, parking_fragment::class.java))
                 }
             }
 
