@@ -1,65 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".account_fragment">
 
+
     <!-- TODO: Update blank fragment layout -->
-   <LinearLayout
+
+
+    <RelativeLayout
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:padding="20dp">
+       android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_alignParentTop="true"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:src="@drawable/bg_header_admin"
+            android:scaleType="centerCrop"
+            />
+
        <TextView
            android:id="@+id/adminName"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Admin Name"
-           android:textSize="20sp"
+           android:layout_below="@+id/header"
+           android:textSize="30dp"
            android:textColor="@color/black"
            android:fontFamily="@font/open_sans_semibold"/>
        <TextView
            android:id="@+id/adminmail"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="admin@gmail.com"
-           android:textSize="15sp"
+           android:layout_below="@+id/adminName"
+           android:text="admin_name@gmail.com"
            android:textColor="@color/black"
            android:fontFamily="@font/open_sans_semibold"/>
 
-      <Button
-          android:layout_marginTop="30dp"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/transparent"
-          android:text="Item 1"
-          android:textColor="@color/black"/>
-      <Button
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/transparent"
-          android:text="Item 1"
-          android:textColor="@color/black"/>
-      <Button
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/transparent"
-          android:text="Item 1"
-          android:textColor="@color/black"/>
-      <Button
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/transparent"
-          android:text="Item 1"
-          android:textColor="@color/black"/>
-      <Button
-          android:id="@+id/logout"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:background="@color/transparent"
-          android:text="Logout"
-          android:textColor="@color/black"/>
-   </LinearLayout>
+        <ImageButton
+            android:id="@+id/admin_manual"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/adminmail"
+            android:src="@drawable/button_admin_manual" />
+
+        <ImageButton
+            android:id="@+id/client_manual"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/admin_manual"
+            android:src="@drawable/button_client_manual" />
+
+        <ImageButton
+            android:id="@+id/security_manual"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/client_manual"
+            android:src="@drawable/button_security_manual" />
+
+        <ImageButton
+            android:id="@+id/faq"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/security_manual"
+            android:src="@drawable/button_faq" />
+
+        <ImageButton
+            android:id="@+id/admin_logout"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/faq"
+            android:src="@drawable/button_logout" />
+
+
+
+    </RelativeLayout>
 
 </FrameLayout>
