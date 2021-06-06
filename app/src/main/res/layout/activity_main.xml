@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-        android:background="@drawable/bg_wavy"
+        android:background="@drawable/bg_login"
     tools:context=".MainActivity">
 
 
@@ -84,40 +84,38 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
-            android:background="#00000000"
+            android:background="@color/transparent"
             android:text="Forgot Password?"
-            android:textColor="@color/black"
+            android:textColor="#44dfdf"
             android:textSize="12sp" />
     </LinearLayout>
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp"
         android:layout_below="@+id/textinputlayout">
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button"
-            android:text="Log in"
-            android:textColor="@color/black"
-            android:alpha="1"/>
+        <ImageButton
+            android:id="@+id/loginme"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_login"
+            android:scaleType="fitCenter"
+            android:layout_centerInParent="true"/>
 
-        <Button
+        <ImageButton
             android:id="@+id/cancel_mainscreen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:background="@color/zxing_transparent"
-            android:text="Cancel"
-            android:textColor="@color/black"/>
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/loginme"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/Cancel"
+            android:scaleType="fitCenter"/>
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 
 
