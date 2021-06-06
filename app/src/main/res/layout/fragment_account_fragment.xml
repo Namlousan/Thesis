@@ -30,7 +30,7 @@
            android:layout_height="wrap_content"
            android:text="Admin Name"
            android:layout_below="@+id/header"
-           android:textSize="30dp"
+           android:textSize="35dp"
            android:textColor="@color/black"
            android:fontFamily="@font/open_sans_semibold"/>
        <TextView
@@ -51,7 +51,8 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/adminmail"
-            android:src="@drawable/button_admin_manual" />
+            android:src="@drawable/button_admin_manual"
+            android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:id="@+id/client_manual"
@@ -62,7 +63,8 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
             android:layout_below="@+id/admin_manual"
-            android:src="@drawable/button_client_manual" />
+            android:src="@drawable/button_client_manual"
+            android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:id="@+id/security_manual"
@@ -73,7 +75,8 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
             android:layout_below="@+id/client_manual"
-            android:src="@drawable/button_security_manual" />
+            android:src="@drawable/button_security_manual"
+            android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:id="@+id/faq"
@@ -84,7 +87,8 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
             android:layout_below="@+id/security_manual"
-            android:src="@drawable/button_faq" />
+            android:src="@drawable/button_faq"
+            android:layout_alignParentLeft="true"/>
 
         <ImageButton
             android:id="@+id/admin_logout"
@@ -95,7 +99,8 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="5dp"
             android:layout_below="@+id/faq"
-            android:src="@drawable/button_logout" />
+            android:src="@drawable/button_logout"
+            android:layout_alignParentLeft="true"/>
 
 
 

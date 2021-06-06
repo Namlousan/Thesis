@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,19 +38,19 @@ class appmoni_fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View = inflater!!.inflate(R.layout.fragment_appmoni_fragment, container, false)
-        view.findViewById<Button>(R.id.clientapp).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.client_app).setOnClickListener {
             activity?.let {
                 val intent = Intent(it, Client_history_table::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.adminapp).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.admin_app).setOnClickListener {
             activity?.let {
                 val intent = Intent(it, Adminapphistory1::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.secuapp).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.security_app).setOnClickListener {
             activity?.let {
                 val intent = Intent(it, SecurityApphistory::class.java)
                 it.startActivity(intent)

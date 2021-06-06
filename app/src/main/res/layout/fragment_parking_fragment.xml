@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Parking Lots"
             android:textSize="50dp"
-            android:fontFamily="@font/bitter_bold"
+            android:fontFamily="@font/open_sans_extrabold"
             android:textColor="@color/black"
             android:layout_marginTop="20dp"
             android:textAlignment="center" />
@@ -107,7 +107,7 @@
                 android:text="Parking Monitoring"
                 android:textSize="30dp"
                 android:layout_marginTop="20dp"
-                android:fontFamily="@font/bitter_bold"
+                android:fontFamily="@font/open_sans_extrabold"
                 android:textColor="@color/black"
                 android:textAlignment="center"/>
 

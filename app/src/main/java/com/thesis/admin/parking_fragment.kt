@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,32 +38,32 @@ class parking_fragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view: View =inflater!!.inflate(R.layout.fragment_parking_fragment, container, false)
-        view.findViewById<Button>(R.id.claw).setOnClickListener {
+        view.findViewById<Button>(R.id.CLAW).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, parking_law::class.java)
                 it.startActivity(intent)
             }
         }
 
-        view.findViewById<Button>(R.id.chtm).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.CHTM).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, Che_parking::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.cn).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.CoN).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, ConParking::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.hp).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.Marcelo).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, Heroes_park::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.pdatabase).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.parkingdb).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, ParkinglotDB::class.java)
                 it.startActivity(intent)

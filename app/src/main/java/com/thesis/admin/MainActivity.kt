@@ -10,10 +10,7 @@ import android.text.TextUtils
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
-import android.widget.VideoView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.textfield.TextInputEditText
@@ -51,7 +48,7 @@ import com.google.firebase.database.*
     }
             private fun login() {
 
-                val button = findViewById<Button>(R.id.login)
+                val button = findViewById<ImageButton>(R.id.loginme)
                 val emailaddress = findViewById<EditText>(R.id.Username)
                 val adminpass = findViewById<EditText>(R.id.adminpass)
 
@@ -84,6 +81,7 @@ import com.google.firebase.database.*
                                             override fun onDataChange(snapshot: DataSnapshot) {
                                                 val AdminDB = snapshot.child("as").value.toString()
                                                 if (AdminDB.equals("Admin")) {
+                                                    intent.putExtra("email", emailaddress.getText())
                                                     startActivity(Intent(this@MainActivity, Home_menu::class.java))
 
                                                 }else {
@@ -109,7 +107,7 @@ import com.google.firebase.database.*
                             }
                 }
 
-                val button2 = findViewById<Button>(R.id.cancel_mainscreen)
+                val button2 = findViewById<ImageButton>(R.id.cancel_mainscreen)
                 button2.setOnClickListener {
                     val alertdialog: AlertDialog = AlertDialog.Builder(this).create()
                     alertdialog.setTitle("Exit")

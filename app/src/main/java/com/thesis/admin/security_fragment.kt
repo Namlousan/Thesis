@@ -1,10 +1,12 @@
 package com.thesis.admin
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,7 +36,28 @@ class security_fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_security_fragment, container, false)
+        val view: View = inflater!!.inflate(R.layout.fragment_security_fragment, container, false)
+
+
+        view.findViewById<ImageButton>(R.id.register_admin).setOnClickListener {
+            activity?.let{
+                val intent = Intent (it, RegAdmin::class.java)
+                it.startActivity(intent)
+            }
+            view.findViewById<ImageButton>(R.id.administrators).setOnClickListener {
+                activity?.let{
+                    val intent = Intent (it, Administrators::class.java)
+                    it.startActivity(intent)
+                }
+            }
+            view.findViewById<ImageButton>(R.id.admin_logs).setOnClickListener {
+                activity?.let{
+                    val intent = Intent (it, Logs::class.java)
+                    it.startActivity(intent)
+                }
+            }
+        }
+        return view
     }
 
     companion object {

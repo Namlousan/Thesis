@@ -3,10 +3,7 @@ package com.thesis.admin
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -36,7 +33,7 @@ class NewClient : AppCompatActivity() {
 //           startActivity(intent)
 //        }
 
-        val button3 = findViewById<Button>(R.id.updateclient)
+        val button3 = findViewById<ImageButton>(R.id.update_client)
         button3.setOnClickListener {
             val intent = Intent(this, U_client_Info::class.java)
             startActivity(intent)

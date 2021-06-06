@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:background="@color/maroon"
+        android:background="@drawable/bg_menus"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         tools:context=".RegAdmin"
@@ -181,17 +181,20 @@
         </LinearLayout>
 
         <Button
-            android:layout_marginTop="15dp"
             android:id="@+id/regbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Save Admin Informations"/>
+            android:layout_marginTop="15dp"
+            android:text="Save Admin Informations"
+            android:background="@drawable/button"/>
+
         <Button
             android:layout_marginTop="15dp"
             android:id="@+id/backbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back to Home menu"/>
+            android:text="Back to Home menu"
+            android:background="@drawable/button"/>
 
 
     </LinearLayout>

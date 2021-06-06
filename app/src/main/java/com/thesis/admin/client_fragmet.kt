@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -45,20 +46,20 @@ class client_fragmet : Fragment() {
 
         val view: View = inflater!!.inflate(R.layout.fragment_client_fragmet, container, false)
 
-        view.findViewById<Button>(R.id.addnewuser).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.new_client).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, NewClientUI::class.java)
                 it.startActivity(intent)
             }
         }
 
-        view.findViewById<Button>(R.id.updateclient).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.update_client).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, Update_client::class.java)
                 it.startActivity(intent)
             }
         }
-        view.findViewById<Button>(R.id.logs).setOnClickListener {
+        view.findViewById<ImageButton>(R.id.qr_pass_logs).setOnClickListener {
             activity?.let{
                 val intent = Intent (it, Logs::class.java)
                 it.startActivity(intent)
