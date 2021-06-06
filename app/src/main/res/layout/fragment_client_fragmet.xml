@@ -40,32 +40,43 @@
                 android:layout_height="130dp">
 
                 <ImageButton
-                    android:id="@+id/qr_pass"
+                    android:id="@+id/new_client"
                     android:layout_width="wrap_content"
                     android:layout_height="120dp"
                     android:background="@color/transparent"
-                    android:src="@drawable/button_qr_pass"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/button_client_new"
                     android:scaleType="centerCrop"/>
 
                 <ImageButton
-                    android:id="@+id/my_logs"
+                    android:id="@+id/update_client"
                     android:layout_width="wrap_content"
                     android:layout_height="120dp"
                     android:background="@color/transparent"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/button_my_logs"
+                    android:src="@drawable/button_client_update"
                     android:scaleType="centerCrop"
-                    android:layout_below="@+id/qr_pass"/>
+                    android:layout_below="@+id/new_client"/>
 
                 <ImageButton
-                    android:id="@+id/client_logout"
+                    android:id="@+id/qr_pass_logs"
                     android:layout_width="wrap_content"
                     android:layout_height="120dp"
-                    android:layout_marginTop="5dp"
                     android:background="@color/transparent"
-                    android:src="@drawable/button_logout_menus"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/button_QR_Pass_Logs"
                     android:scaleType="centerCrop"
-                    android:layout_below="@+id/my_logs"/>
+                    android:layout_below="@+id/update_client"/>
+
+                <ImageButton
+                    android:id="@+id/client_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:background="@color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/button_client_settings"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@+id/qr_pass_logs"/>
 
             </RelativeLayout>
 
