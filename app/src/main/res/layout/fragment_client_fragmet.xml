@@ -5,324 +5,72 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".client_fragmet"
-    android:background="@color/white">
+    android:background="@drawable/bg_menus">
 
     <!-- TODO: Update blank fragment layout -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="20dp">
+
         <TextView
-            android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CLIENT MENU"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/bitter_bold"
+            android:text="CLIENT"
+            android:textAlignment="center"
             android:textColor="@color/black"
-            android:fontFamily="@font/open_sans_extrabold"
-            android:textSize="30sp"
-            android:layout_gravity="center_horizontal"
-            android:textAlignment="center"/>
+            android:textSize="50sp" />
+
+
 
         <ScrollView
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none"
+            android:layout_marginTop="15dp"
             android:layout_weight="1">
 
-            <LinearLayout
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/_20sdp">
-                
-                
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:background="@drawable/cardview_bg">
+                android:layout_height="130dp">
 
+                <ImageButton
+                    android:id="@+id/qr_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/button_qr_pass"
+                    android:scaleType="centerCrop"/>
 
+                <ImageButton
+                    android:id="@+id/my_logs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:background="@color/transparent"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/button_my_logs"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@+id/qr_pass"/>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Add New Client"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/open_sans_extrabold"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginTop="40dp"/>
+                <ImageButton
+                    android:id="@+id/client_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/transparent"
+                    android:src="@drawable/button_logout_menus"
+                    android:scaleType="centerCrop"
+                    android:layout_below="@+id/my_logs"/>
 
-                    <Button
-                        android:id="@+id/addnewuser"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/transparent"
-                        android:padding="20dp" />
-                    <ImageView
-                        android:layout_marginTop="30dp"
-                        android:layout_width="63dp"
-                        android:layout_height="70dp"
-                        android:src="@drawable/_useradd"
-                        android:layout_marginLeft="@dimen/_14sdp"/>
+            </RelativeLayout>
 
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:background="@drawable/cardview_bg">
-
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Update Client"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/open_sans_extrabold"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="65dp"
-                        android:layout_marginTop="40dp"/>
-
-                    <Button
-                        android:id="@+id/updateclient"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/transparent"
-                        android:padding="20dp" />
-                    <ImageView
-                        android:layout_marginTop="30dp"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:src="@drawable/client_png"
-                        android:layout_marginLeft="@dimen/_10sdp"/>
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:background="@drawable/cardview_bg">
-
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LOGS"
-                        android:textColor="@color/black"
-                        android:textSize="25sp"
-                        android:fontFamily="@font/open_sans_extrabold"
-                        android:layout_marginRight="40dp"
-                        android:layout_marginLeft="120dp"
-                        android:layout_marginTop="40dp"/>
-
-                    <Button
-                        android:id="@+id/logs"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:background="@color/transparent"
-                        android:padding="20dp" />
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="68dp"
-                        android:layout_marginLeft="@dimen/_15sdp"
-                        android:layout_marginTop="30dp"
-                        android:src="@drawable/logs" />
-
-                </RelativeLayout>
-
-
-
-
-
-
-            <!--<androidx.cardview.widget.CardView
-                android:id="@+id/addnewclient"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_width="290dp"
-                android:layout_height="@dimen/_80sdp"
-                app:cardCornerRadius="@dimen/_15sdp"
-                android:elevation="@dimen/_5sdp"
-                android:outlineAmbientShadowColor="@color/dark_shadow"
-                android:outlineSpotShadowColor="@color/light_shadow">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_marginTop="10dp"
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:src="@drawable/_useradd"
-                        android:layout_marginLeft="@dimen/_10sdp"/>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Add New Client"
-                            android:fontFamily="@font/open_sans_extrabold"
-                            android:textColor="#0077B6"
-                            android:textSize="20sp"
-                            android:textAlignment="viewStart"/>
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_width="290dp"
-                    android:layout_height="@dimen/_80sdp"
-                    app:cardCornerRadius="@dimen/_15sdp"
-                    android:elevation="@dimen/_5sdp"
-                    android:outlineAmbientShadowColor="@color/dark_shadow"
-                    android:outlineSpotShadowColor="@color/light_shadow">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/client_png"
-                            android:layout_marginLeft="@dimen/_10sdp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Update Client"
-                                android:fontFamily="@font/open_sans_extrabold"
-                                android:textColor="#0077B6"
-                                android:textSize="20sp"
-                                android:textAlignment="viewStart"/>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_marginTop="20dp"
-                    android:layout_width="290dp"
-                    android:layout_height="@dimen/_80sdp"
-                    app:cardCornerRadius="@dimen/_15sdp"
-                    android:elevation="@dimen/_5sdp"
-                    android:outlineAmbientShadowColor="@color/dark_shadow"
-                    android:outlineSpotShadowColor="@color/light_shadow"
-                    android:layout_gravity="center_horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/logs"
-                            android:layout_marginLeft="@dimen/_10sdp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Client QR-Pass"
-                                android:fontFamily="@font/open_sans_extrabold"
-                                android:textColor="#0077B6"
-                                android:textSize="20sp"
-                                android:textAlignment="viewStart"/>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_marginTop="20dp"
-                    android:layout_width="290dp"
-                    android:layout_height="@dimen/_80sdp"
-                    app:cardCornerRadius="@dimen/_15sdp"
-                    android:elevation="@dimen/_5sdp"
-                    android:outlineAmbientShadowColor="@color/dark_shadow"
-                    android:outlineSpotShadowColor="@color/light_shadow"
-                    android:layout_gravity="center_horizontal">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_marginTop="10dp"
-                            android:layout_width="75dp"
-                            android:layout_height="75dp"
-                            android:src="@drawable/clientsetting"
-                            android:layout_marginLeft="@dimen/_10sdp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="20dp">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Client Settings"
-                                android:fontFamily="@font/open_sans_extrabold"
-                                android:textColor="#0077B6"
-                                android:textSize="20sp"
-                                android:textAlignment="viewStart"/>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>-->
-            </LinearLayout>
-
-            </ScrollView>
+        </ScrollView>
     </LinearLayout>
-
-
 
 
 
